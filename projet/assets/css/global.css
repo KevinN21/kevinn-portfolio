@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "HarlowSolid";
+  src: url('assets/font/HarlowSolid.ttf');
+}
+
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+h1{
+  color:red;
+  font-family: 'HarlowSolid';
+  margin: 10%;
+}
