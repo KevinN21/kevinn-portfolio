@@ -65,10 +65,10 @@
         </nav>
         <div class="row">
             <div class="col-md-12 k-site-title">
-                <img class="img-responsive center-block"  src="assets/img/kevinn-portfolio-logo.svg" alt="Logo Kevin Nguyen Portfolio">
-                <h1 class="">Web Developper</h1>
-                <!-- <i class="fa fa-arrow-down fa fa-3x"></i> -->
-                <a href="#"><div class="scroll-down"></div></a>
+                <h1>
+                    <img class="img-responsive center-block"  src="assets/img/logo-animated.svg" alt="Logo Kevin Nguyen Portfolio">
+                </h1>
+                    <a href="#"><div class="scroll-down"></div></a>
             </div>
         </div>
     </header>
