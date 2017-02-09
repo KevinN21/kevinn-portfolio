@@ -55,116 +55,109 @@
 
                 <div class="collapse navbar-collapse" id="k-navbar">
                     <ul class="nav navbar-nav">
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Work</a></li>
-                        <li><a href="#">Skill</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#k-abtme">About</a></li>
+                        <li><a href="#k-works">Work</a></li>
+                        <li><a href="#k-showcase">Showcase</a></li>
+                        <li><a href="#k-skills">Skill</a></li>
+                        <li><a href="#k-contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="row">
             <div class="col-md-12 k-site-title">
-                <img class="img-responsive center-block"  src="assets/img/kevinn-portfolio-logo.svg" alt="Logo Kevin Nguyen Portfolio">
-                <h1 class="">Web Developper</h1>
-                <!-- <i class="fa fa-arrow-down fa fa-3x"></i> -->
-                <a href="#"><div class="scroll-down"></div></a>
+                <h1 class="">
+                    <img class="center-block"  src="assets/img/logo_animated.svg" alt="Logo Kevin Nguyen Portfolio">
+                </h1>
+                <a href="#k-abtme"><div class="scroll-down"></div></a>
             </div>
         </div>
     </header>
+
     <main class="container-fluid">
         <section id="k-abtme"    class="row">
+            <h2 class="k-titlesection pull-left">About me</h2>
             <article class="col-xs-12">
-              <h2 class="k-titlesection">About me</h2>
               <figure class="row">
-                <figcaption class="col-md-12 col-xs12">
-                    <img class="col-md-3 col-xs-12 img-responsive k-face" src="assets/img/Kevin-Nguyen.jpg" alt="Ma tête Kevin Nguyen">
-                    <h2 class="col-md-5 col-xs-12">Kevin Nguyen 21 ans</h2>
-                    <h3 class="col-md-5 col-xs-12">Developper Web</h3>
-                    <div class="">
-                        <a href="https://github.com/KevinN21"><img src="assets/img/github.svg" target='_blank' alt="Personal GitHub Kevin Nguyen"></a>
-                        <a href="https://www.linkedin.com/in/kevin21-nguyen"><img src="assets/img/linkedin.svg" target='_blank' alt="Personal Linkedin Kevin Nguyen"></a>
-                    </div>
-                    <p class="col-md-5 col-xs-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                      Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio. Lorem </p>
+                <figcaption class="col-md-12 col-xs-12">
+                    <img class="col-md-4 col-xs-12 k-face" src="assets/img/Kevin-Nguyen.jpg" alt="Ma tête Kevin Nguyen">
+                        <div class="k-name col-md-7 col-xs-12">
+                            <h2 class="col-md-12">Kevin <span>N</span>guyen <span>21</span> ans</h2>
+                            <h3 class="col-md-12">Developper <span>W</span>eb</h3>
+                            <div class="col-md-12 col-xs-12 k-social">
+                                <a href="https://github.com/KevinN21"><img src="assets/img/github.svg" target='_blank' alt="Personal GitHub Kevin Nguyen"></a>
+                                <a href="https://www.linkedin.com/in/kevin21-nguyen"><img src="assets/img/linkedin.svg" target='_blank' alt="Personal Linkedin Kevin Nguyen"></a>
+                            </div>
+                        </div>
                 </figcaption>
               </figure>
             </article>
-                <div class="container">
-                  <article class="row">
-                    <p class="col-md-12 col-xs-10">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                    Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                    Lorem
-                    </p>
-                  </article>
-                  <div class="row">
-
-                  <article class="col-md-6 col-xs-12">
-                    <img class="col-md-2" src="assets/img/language.svg" alt="Petit logo">
-                    <h4 class="col-md-8">Language / Langue / Ideomas</h4>
-                    <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                    Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                    Lorem</p>
-                  </article>
-                  <article class="col-md-6 col-xs-12">
-                      <img class="col-md-2" src="assets/img/language.svg" alt="Petit logo">
-                      <h4 class="col-md-8">Language / Langue / Ideomas</h4>
-                      <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                      Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                      Lorem</p>
-                  </article>
-                  <article class="col-md-6 col-xs-12">
-                    <img class="col-md-2" src="assets/img/language.svg" alt="Petit logo">
-                    <h4 class="col-md-8">Language / Langue / Ideomas</h4>
-                    <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                    Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                    Lorem</p>
-                  </article>
-                  <article class="col-md-6 col-xs-12">
-                    <img class="col-md-2" src="assets/img/language.svg" alt="Petit logo">
-                    <h4 class="col-md-8">Language / Langue / Ideomas</h4>
-                    <p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                    Lorem Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-                    Lorem</p>
-                  </article>
-              </div>
-              </div>
+                <div class="k-descrip row">
+                        <p class="col-md-12 col-xs-12">Wanna know more about me?</p>
+                        <article class="col-md-6 col-xs-12">
+                            <img class="col-md-2" src="assets/img/languages.svg" alt="Languages logo">
+                            <div class="col-md-10">
+                                <h4>I speak</h4>
+                                <p>Is this real life, or is this just fantasy?</p>
+                            </div>
+                        </article>
+                        <article class="col-md-6 col-xs-12">
+                              <img class="col-md-2" src="assets/img/travel.svg" alt="Travel logo">
+                              <div class="col-md-10">
+                                  <h4>I speak</h4>
+                                  <p>Is this real life, or is this just fantasy?</p>
+                              </div>
+                        </article>
+                        <article class="col-md-6 col-xs-12">
+                            <img class="col-md-2" src="assets/img/games.svg" alt="Practice logo">
+                            <div class="col-md-10">
+                                <h4>I speak</h4>
+                                <p>Is this real life, or is this just fantasy?</p>
+                            </div>
+                        </article>
+                        <article class="col-md-6 col-xs-12">
+                            <img class="col-md-2" src="assets/img/pracc.svg" alt="Play logo">
+                            <div class="col-md-10">
+                                <h4>I speak</h4>
+                                <p>Is this real life, or is this just fantasy?</p>
+                            </div>
+                        </article>
+                    </div>
         </section>
         <section id="k-works"    class="row">
           <article class="row">
-            <h2>My Work</h2>
+            <h2 class="k-titlesection pull-left">My Work</h2>
               <figure class="row">
                 <figcaption class="col-md-4">
-                  <img src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                  <img src="assets/img/dateart.jpg" alt="My work" >
                 </figcaption>
                 <figcaption class="col-md-4">
-                  <img src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                  <img src="assets/img/dateart.jpg" alt="My work" >
                 </figcaption>
                 <figcaption class="col-md-4">
-                  <img src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                  <img src="assets/img/dateart.jpg" alt="My work" >
                 </figcaption>
               </figure>
               <figure class="row">
                 <figcaption class="col-md-4">
-                  <img src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                  <img src="assets/img/dateart.jpg" alt="My work" >
                 </figcaption>
                 <figcaption class="col-md-4">
-                  <img src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                  <img src="assets/img/dateart.jpg" alt="My work" >
                 </figcaption>
                 <figcaption class="col-md-4">
-                  <img src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                  <img src="assets/img/dateart.jpg" alt="My work" >
                 </figcaption>
               </figure>
           </article>
-          <article class="row">
+          <!-- <article class="row">
             <h3>Description du projet :</h3><p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
             Lorem Lorem ipsum dolor sit amet, consecm </p>
             <h3>Date du projet :</h3><p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
             Lorem Lorem ipsum dolor sit amet, consecrem </p>
             <h3>Lien du projet :</h3><p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
             Lorem Lorem ipsum dolor sit amet, consec </p>
-          </article>
+          </article> -->
         </section>
         <section id="k-showcase" class="row">
               <article class="row">
@@ -183,19 +176,19 @@
                   <!-- Wrapper for slides -->
                   <div class="carousel-inner" role="listbox">
                     <div class="item active">
-                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
                     </div>
 
                     <div class="item">
-                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
                     </div>
 
                     <div class="item">
-                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
                     </div>
 
                     <div class="item">
-                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" style="width:100%;">
+                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
                     </div>
                   </div>
 
@@ -304,6 +297,20 @@
           <li><i class="fa fa-phone"></i> +33 6 70 31 77 85</li>
         </ul>
       </nav>
-    </footer>
+      <div class="KW_progressContainer">
+		<div class="KW_progressBar">
+    <script type="text/javascript">
+        $(window).load(function(){
+      $(window).scroll(function() {
+        var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
+        console.log(wintop);
+        var totalScroll = (wintop/(docheight-winheight))*100;
+        console.log("total scroll" + totalScroll);
+        $(".KW_progressBar").css("width",totalScroll+"%");
+      });
+
+    });
+    </script>
+</footer>
 </body>
 </html>
