@@ -65,7 +65,7 @@
             </div>
         </nav>
         <div class="row">
-            <div class="col-md-12 k-site-title">
+            <div class="col-md-12 k-site-title center-block">
                 <h1 class="">
                     <img class="center-block"  src="assets/img/logo_animated.svg" alt="Logo Kevin Nguyen Portfolio">
                 </h1>
@@ -124,30 +124,22 @@
                         </article>
                     </div>
         </section>
-        <section id="k-works"    class="row">
+        <section id="k-works"   class="row center-block">
           <article class="row">
             <h2 class="k-titlesection pull-left">My Work</h2>
               <figure class="row">
-                <figcaption class="col-md-4">
+            <?php for($i = 0; $i <= 4; $i ++) : ?>
+                <figcaption class="col-md-2">
                   <img src="assets/img/dateart.jpg" alt="My work" >
                 </figcaption>
-                <figcaption class="col-md-4">
-                  <img src="assets/img/dateart.jpg" alt="My work" >
-                </figcaption>
-                <figcaption class="col-md-4">
-                  <img src="assets/img/dateart.jpg" alt="My work" >
-                </figcaption>
+            <?php endfor; ?>
               </figure>
               <figure class="row">
-                <figcaption class="col-md-4">
-                  <img src="assets/img/dateart.jpg" alt="My work" >
+            <?php for($i = 0; $i <= 4; $i ++) : ?>
+                <figcaption class="col-md-2">
+                    <img src="assets/img/dateart.jpg" alt="My work" >
                 </figcaption>
-                <figcaption class="col-md-4">
-                  <img src="assets/img/dateart.jpg" alt="My work" >
-                </figcaption>
-                <figcaption class="col-md-4">
-                  <img src="assets/img/dateart.jpg" alt="My work" >
-                </figcaption>
+            <?php endfor; ?>
               </figure>
           </article>
           <!-- <article class="row">
@@ -162,19 +154,19 @@
         <section id="k-showcase" class="row">
               <article class="row">
 
-                  <h2>My Showcase</h2>
+                  <h2 class="k-titlesection pull-left">My Showcase</h2>
 
-                  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                  <div id="k-rousel" class="carousel slide" data-ride="carousel">
                   <!-- Indicators -->
                   <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#k-rousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#k-rousel" data-slide-to="1"></li>
+                    <li data-target="#k-rousel" data-slide-to="2"></li>
+                    <li data-target="#k-rousel" data-slide-to="3"></li>
                   </ol>
 
                   <!-- Wrapper for slides -->
-                  <div class="carousel-inner" role="listbox">
+                  <div class="carousel-inner center-block" role="listbox">
                     <div class="item active">
                       <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
                     </div>
@@ -193,12 +185,12 @@
                   </div>
 
                   <!-- Left and right controls -->
-                  <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                  <a class="left carousel-control" href="#k-rousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" style="color:#ED5758;" aria-hidden="true"></span>
                     <span class="sr-only">Previous</span>
                   </a>
-                  <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                  <a class="right carousel-control" href="#k-rousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" style="color:#ED5758;" aria-hidden="true"></span>
                     <span class="sr-only">Next</span>
                   </a>
                 </div>
