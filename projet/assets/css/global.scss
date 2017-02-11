@@ -1,19 +1,15 @@
 // ---------- Font Variable
-$primaryfont:'Consolas';
-$titlefont:'Harlow';
-$navfont:'Corbel';
-//---------- Fin Font Variable
+$primaryfont: 'Verdana';
+$titlefont: 'Corbel';
+$navfont: 'Corbel'; //---------- Fin Font Variable
 //---------- Color
-$actioncolor:#ED5758;
-$titlecolor:#4D4D4D;
-$bgcolor:#B7B7B7;
-$fontcolor:#000;
-//----------  Fin Color
-
-
+$actioncolor: #ED5758;
+$titlecolor: #4D4D4D;
+$bgcolor: #B7B7B7;
+$fontcolor: #000; //----------  Fin Color
 @font-face {
     font-family: 'Harlow';
-    src:url('../font/HarlowSolid.ttf');
+    src: url('../font/HarlowSolid.ttf');
 }
 @font-face {
     font-family: 'Corbel';
@@ -23,120 +19,164 @@ $fontcolor:#000;
     font-family: 'Consolas';
     src: url('../font/Consolas.ttf');
 }
-*{
-    margin:0;
-    padding:0;
+// RESET
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
+.container-fluid {
+    margin: 0;
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
 //---------- header background ----------//
+//---------- MISC ----------------------//
 
-body{
-    width: 100vw;
-    height:90vh;
-    overflow-x: hidden;
-    background-size:cover;
-    z-index:-8;
-}
-body:before{
-    content:'';
-    left:0;
-    top:0;
-    bottom:0;
-    right:0;
-    width:100%;
-    height:100%;
-    position:absolute;
-    -webkit-filter: blur(14px);
-    background-image:url('../img/bgheader.jpeg');
-    z-index:-9;
-}
-body:after{
-    content:'';
-    left:0;
-    top:0;
-    bottom:0;
-    right:0;
-    width:100%;
-    height:100%;
-    position:absolute
-}
-
-//---------- Fin header background ----------//
-//---------- MISC ----------//
-#k-header,#k-abtme,#k-works,#k-showcase,#k-contact{
-    height:90vh;
+.KW_progressContainer {
+    left: 0;
     width: 100%;
-    margin-top:6vh;
+    height: 0.4em;
+    margin-bottom: 0;
+    position: fixed;
+    bottom: 0;
+    overflow: hidden;
+    background-color: white;
+    content: "";
+    display: table;
+    table-layout: fixed;
 }
 
-.container-fluid{
-    margin:0;
-    padding:0;
+.KW_progressBar {
+    width: 0;
+    float: left;
+    height: 100%;
+    z-index: 99;
+    max-width: 100%;
+    background-color: orange;
+    -webkit-transition: width 0.6s ease;
+    -o-transition: width 0.6s ease;
+    transition: width 0.6s ease;
+}
+// ------------ FIN MISC -----------//
+body {
+    width: 100vw;
+    height: 90vh;
+    overflow-x: hidden;
+    background-size: cover;
+    z-index: -8;
+}
+
+body:before {
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    -webkit-filter: blur(14px);
+    background-image: url('../img/bgheader.jpeg');
+    z-index: -9;
+}
+
+body:after {
+    content: '';
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+//---------- Fin header background ----------//
+
+#k-abtme,
+#k-contact,
+#k-header,
+#k-showcase,
+#k-works {
+    height: 100vh;
+    width: 100%;
 }
 //---------- Navbar + Header ----------//
-nav{
+
+nav {
     background-color: $bgcolor;
 }
+
 .navbar .navbar-nav {
-  display: inline-block;
-  float: none;
-  vertical-align: top;
-  background-color: $bgcolor;
-}
-.navbar .navbar-collapse {
-  text-align: center;
-  background-color: $bgcolor;
-}
-.navbar-header{
+    display: inline-block;
+    float: none;
+    vertical-align: top;
     background-color: $bgcolor;
 }
-.navbar-default .navbar-toggle{
+
+.navbar .navbar-collapse {
+    text-align: center;
+    background-color: $bgcolor;
+}
+
+.navbar-header {
+    background-color: $bgcolor;
+}
+
+.navbar-default .navbar-toggle {
     border-color: $bgcolor;
 }
-.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand{
-    margin:0;
+
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+    margin: 0;
 }
-.navbar-brand i{
-    color:$fontcolor;
+
+.navbar-brand i {
+    color: $fontcolor;
 }
-#k-navbar ul li a{
-    font-family:$navfont;
+
+#k-navbar ul li a {
+    font-family: $navfont;
     font-variant: small-caps;
     font-weight: bolder;
     font-size: 1.5em;
-    color:$fontcolor;
+    color: $fontcolor;
 }
-#k-navbar ul li a:hover,
 #k-navbar ul li a:active,
-.navbar-brand:hover{
-    background-color:$actioncolor;
+#k-navbar ul li a:hover,
+.navbar-brand:hover {
+    background-color: $actioncolor;
 }
-.k-site-title{
-    height:100vh;
+//
+// .k-site-title {
+//     height: 100vh;
+// }
+
+.k-site-title img {
+    margin-top: 10%;
+    width: 70%;
 }
-.k-site-title img{
-    width: 30%;
-}
-.k-site-title h1{
-    font-family: $titlefont;
-    font-size: 4.5em;
-    color:$actioncolor;
-}
+
 .scroll-down {
     position: absolute;
     left: 50%;
-    bottom: 10vh;
+    top:75vh;
     display: block;
     text-align: center;
     font-size: 20px;
     z-index: 100;
     text-decoration: none;
     text-shadow: 0;
-    width: 24px;
-    height: 24px;
-    border-bottom: 4px solid #000;
-    border-right: 4px solid #000;
+    width: 35px;
+    height: 35px;
+    border-bottom: 4px solid $actioncolor;
+    border-right: 4px solid $actioncolor;
     z-index: 9;
     -webkit-transform: translate(-50%, 0%) rotate(45deg);
     -moz-transform: translate(-50%, 0%) rotate(45deg);
@@ -146,47 +186,54 @@ nav{
     animation: fade_move_down 2s ease-in-out infinite;
 }
 @-webkit-keyframes fade_move_down {
-     0% {
-         -webkit-transform:translate(0, -10px) rotate(45deg);
-         opacity: 0;
+    0% {
+        -webkit-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
     }
-     50% {
-         opacity: 1;
+
+    50% {
+        opacity: 1;
     }
-     100% {
-         -webkit-transform:translate(0, 10px) rotate(45deg);
-         opacity: 0;
+
+    100% {
+        -webkit-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
     }
 }
 @-moz-keyframes fade_move_down {
-     0% {
-    -moz-transform:translate(0, -10px) rotate(45deg);
-    opacity: 0;
+    0% {
+        -moz-transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
     }
-     50% {
-    opacity: 1;
+
+    50% {
+        opacity: 1;
     }
-     100% {
-    -moz-transform:translate(0, 10px) rotate(45deg);
-    opacity: 0;
+
+    100% {
+        -moz-transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
     }
 }
 @keyframes fade_move_down {
-     0% {
-    transform:translate(0, -10px) rotate(45deg);
-    opacity: 0;
+    0% {
+        transform: translate(0, -10px) rotate(45deg);
+        opacity: 0;
     }
-     50% {
-    opacity: 1;
+
+    50% {
+        opacity: 1;
     }
-     100% {
-    transform:translate(0, 10px) rotate(45deg);
-    opacity: 0;
+
+    100% {
+        transform: translate(0, 10px) rotate(45deg);
+        opacity: 0;
     }
 }
-.k-navbar{
+
+.k-navbar {
     position: fixed;
-    top: 0px;
+    top: 0;
     z-index: 999;
     width: 100%;
     background: none;
@@ -196,34 +243,150 @@ nav{
     opacity: 0;
     top: -100px;
 }
+
 .sticky {
-	background-color: $bgcolor;
-	opacity: 1;
-	top: 0px;
-}
-
-//---------- Fin Nav Bar HEADER ----------//
-//---------- SECTION ABOUT ME ----------//
-
-#k-abtme{
-    padding-left: 4%;
     background-color: $bgcolor;
+    opacity: 1;
+    top: 0;
 }
-#k-abtme .k-titlesection{
-    font-family: $titlefont;
+//---------- FIN NAV BAR HEADER ----------//
+//---------- SECTION ABOUT ME ------------//
+#k-abtme {
+    margin-top: 1%;
+    background-color: $bgcolor;
 
-    margin-bottom: 2em;
-    padding-bottom:0.2em;
-    border-bottom:2px solid $actioncolor;
+    .k-titlesection {
+        margin-left: -1%;
+        margin-top:4%;
+        margin-bottom: 3%;
+        padding: 0.5% 3%;
+        font-family: $navfont;
+        font-variant: small-caps;
+        font-weight: bolder;
+        color: #fff;
+        background-color: $actioncolor;
+    }
 
-    width: 12%;
+    figure {
+        margin-left: 4%;
+        margin-bottom: 2%;
+    }
+
+    .k-face {
+        padding: 0;
+        width: 20%;
+        border-radius: 100%;
+        border: 4px solid #fff;
+    }
+
+    .k-face:hover {
+        background-color: $actioncolor;
+        opacity: 0.8;
+    }
+
+    .k-name {
+        h2,
+        h3 {
+            margin-top: 0;
+            margin-bottom: 1em;
+            font-family: $primaryfont;
+            text-transform: uppercase;
+        }
+
+        h2::first-letter,
+        h3::first-letter,
+        span {
+            font-size: 1.4em;
+            font-weight: 400;
+        }
+
+        .k-social {
+            display: inline-block;
+
+            img {
+                width: 5%;
+            }
+        }
+    }
+        .k-descrip {
+            margin-left: 5%;
+            width: 100%;
+            height: 100%;
+            font-family: $primaryfont;
+            color: $fontcolor;
+
+            article {
+                padding: 0;
+
+                h4 {
+                    padding-top: 0.5%;
+                    font-family: $primaryfont;
+                    text-transform: uppercase;
+                }
+
+                img {
+                    width: 10%;
+                }
+            }
+        }
 
 }
-#k-abtme .k-face{
-    padding:0;
+//---------- FIN SECTION ABOUT ME --------//
+//---------- SECTION MY WORK -------------//
+#k-works {
+    margin-top: 4%;
+    background-color:#fff;
 
-    border-radius: 100%;
-    border:10px solid #fff;
+    .k-titlesection {
+        margin-left: -1%;
+        margin-top:4%;
+        margin-bottom: 3%;
+        padding: 0.5% 3%;
+        font-family: $navfont;
+        font-variant: small-caps;
+        font-weight: bolder;
+        color: #fff;
+        background-color: $actioncolor;
+    }
+    figure{
+        float:left;
+
+        figcaption{
+            width: 16%;
+
+            margin: 0 2% 4% 2%;
+            img{
+                width: 100%;
+                height:100%;
+            }
+        }
+    }
 }
+//---------- FIN SECTION MY WORK ---------//
+//---------- SECTION SHOWCASE ------------//
+#k-showcase{
+    margin-top: 4%;
+    background-color:$bgcolor;
 
-//---------- FIN SECTION ABOUT ME ----------//
+    .k-titlesection {
+        margin-left: -1%;
+        margin-top:4%;
+        margin-bottom: 3%;
+        padding: 0.5% 3%;
+        font-family: $navfont;
+        font-variant: small-caps;
+        font-weight: bolder;
+        color: #fff;
+        background-color: $actioncolor;
+    }
+    #k-rousel{
+        position:relative;
+        height:99vh;
+        img{
+            margin:auto;
+            width: auto;
+            height:40vh;
+        }
+    }
+}
+//---------- FIN SECTION SHOWCASE --------//
