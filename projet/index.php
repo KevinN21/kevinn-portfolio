@@ -95,28 +95,28 @@
             </article>
                 <div class="k-descrip row">
                         <p class="col-md-12 col-xs-12">Wanna know more about me?</p>
-                        <article class="col-md-6 col-xs-12">
-                            <img class="col-md-2" src="assets/img/languages.svg" alt="Languages logo">
-                            <div class="col-md-10">
+                        <article class="col-md-6 col-xs-6">
+                            <img class="col-md-2 col-xs-4" src="assets/img/languages.svg" alt="Languages logo">
+                            <div class="col-md-10 col-xs-8">
                                 <h4>I speak</h4>
                                 <p>Is this real life, or is this just fantasy?</p>
                             </div>
                         </article>
-                        <article class="col-md-6 col-xs-12">
-                              <img class="col-md-2" src="assets/img/travel.svg" alt="Travel logo">
+                        <article class="col-md-6 col-xs-6">
+                              <img class="col-md-2 col-xs-" src="assets/img/travel.svg" alt="Travel logo">
                               <div class="col-md-10">
                                   <h4>I speak</h4>
                                   <p>Is this real life, or is this just fantasy?</p>
                               </div>
                         </article>
-                        <article class="col-md-6 col-xs-12">
+                        <article class="col-md-6 col-xs-6">
                             <img class="col-md-2" src="assets/img/games.svg" alt="Practice logo">
                             <div class="col-md-10">
                                 <h4>I speak</h4>
                                 <p>Is this real life, or is this just fantasy?</p>
                             </div>
                         </article>
-                        <article class="col-md-6 col-xs-12">
+                        <article class="col-md-6 col-xs-6">
                             <img class="col-md-2" src="assets/img/pracc.svg" alt="Play logo">
                             <div class="col-md-10">
                                 <h4>I speak</h4>
@@ -125,33 +125,31 @@
                         </article>
                     </div>
         </section>
-        <section id="k-works"   class="row center-block">
-          <article class="row">
-            <h2 class="k-titlesection pull-left">My Work</h2>
-              <figure class="row">
-            <?php for($i = 0; $i <= 4; $i ++) : ?>
-                <figcaption class="col-md-2">
-                  <img src="assets/img/dateart.jpg" alt="My work" >
-                </figcaption>
-            <?php endfor; ?>
-              </figure>
-              <figure class="row">
-            <?php for($i = 0; $i <= 4; $i ++) : ?>
-                <figcaption class="col-md-2">
-                    <img src="assets/img/dateart.jpg" alt="My work" >
-                </figcaption>
-            <?php endfor; ?>
-              </figure>
-          </article>
-          <!-- <article class="row">
-            <h3>Description du projet :</h3><p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-            Lorem Lorem ipsum dolor sit amet, consecm </p>
-            <h3>Date du projet :</h3><p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-            Lorem Lorem ipsum dolor sit amet, consecrem </p>
-            <h3>Lien du projet :</h3><p class="col-md-12">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut condimentum dui, ut ultrices turpis. Vivamus erat odio.
-            Lorem Lorem ipsum dolor sit amet, consec </p>
-          </article> -->
-        </section>
+<section id="k-works"   class="row center-block">
+    <article class="row">
+        <h2 class="k-titlesection pull-left">My Work</h2>
+        <?php for($a=0;$a<=1;$a++) : ?>
+            <div class="row">
+                <figure class="col-md-12 col-xs-12">
+                    <?php for($i = 0; $i <= 3; $i ++) : ?>
+                        <figcaption class="k-frame col-md-4">
+                            <div class="k-imgwork">
+                                <img src="assets/img/kebab.jpg" alt="My Work"/>
+                                    <div class="k-details">
+                                        <h1>My Kebab</h1>
+                                        <p class="col-md-12">Lorem ipsum dolor. Aenean scelerisque odio ut dui feugiat commodo. Nulla blandit erat vel nisi consectetur ac pharetra augue consectetur</p>
+                                        <a href="#">Find out more</a>
+                                    </div>
+                            </div>
+                        </figcaption>
+                    <?php endfor; ?>
+                </figure>
+            </div>
+        <?php endfor ;?>
+    </article>
+</section>
+
+
         <section id="k-showcase" class="row">
               <article class="row">
 
@@ -296,9 +294,7 @@
         $(window).load(function(){
       $(window).scroll(function() {
         var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
-        console.log(wintop);
         var totalScroll = (wintop/(docheight-winheight))*100;
-        console.log("total scroll" + totalScroll);
         $(".KW_progressBar").css("width",totalScroll+"%");
       });
 
