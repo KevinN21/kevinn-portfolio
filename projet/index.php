@@ -35,12 +35,14 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.js"></script>
         <script src="assets/js/global.js"></script>
 
       <title>Kevin Nguyen's Portfolio</title>
     </head>
 <body>
-    <header id="k-header" class="text-center">
+<div id="fullpage">
+    <header id="k-header" class=" text-center">
         <nav class="k-navbar navbar navbar-default">
             <div  class="container-fluid">
                 <div class="navbar-header">
@@ -64,7 +66,7 @@
                 </div>
             </div>
         </nav>
-        <div class="row">
+        <section class=" row">
 
             <div class="col-md-12 k-site-title center-block">
                 <h1 class="">
@@ -72,213 +74,182 @@
                 </h1>
                 <a href="#k-abtme"><div class="scroll-down"></div></a>
             </div>
-        </div>
+        </section>
     </header>
-
     <main class="container-fluid">
-        <section id="k-abtme"    class="row">
-            <h2 class="k-titlesection pull-left">About me</h2>
-            <article class="col-xs-12">
-              <figure class="row">
-                <figcaption class="col-md-12 col-xs-12">
-                    <img class="col-md-4 col-xs-12 k-face" src="assets/img/Kevin-Nguyen.jpg" alt="Ma tête Kevin Nguyen">
-                        <div class="k-name col-md-7 col-xs-12">
-                            <h2 class="col-md-12">Kevin <span>N</span>guyen <span>21</span> ans</h2>
-                            <h3 class="col-md-12">Developper <span>W</span>eb</h3>
-                            <div class="col-md-12 col-xs-12 k-social">
-                                <a href="https://github.com/KevinN21"><img src="assets/img/github.svg" target='_blank' alt="Personal GitHub Kevin Nguyen"></a>
-                                <a href="https://www.linkedin.com/in/kevin21-nguyen"><img src="assets/img/linkedin.svg" target='_blank' alt="Personal Linkedin Kevin Nguyen"></a>
+            <section id="k-abtme"    class="section row text-center">
+                <h2 class="k-titlesection pull-left">About me</h2>
+                <article class="row">
+                <figure class="col-xs-12">
+                    <figcaption>
+                        <img class="k-face" src="assets/img/Kevin-Nguyen.jpg" alt="Ma tête Kevin Nguyen">
+                            <div class="k-name">
+                                <h2 class="">Kevin <span>N</span>guyen</h2>
+                                <h3 class="">Developper <span>W</span>eb</h3>
+                                <div class="k-social">
+                                    <a href="https://github.com/KevinN21"><img src="assets/img/github.svg" target='_blank' alt="Personal GitHub Kevin Nguyen"></a>
+                                    <a href="https://www.linkedin.com/in/kevin21-nguyen"><img src="assets/img/linkedin.svg" target='_blank' alt="Personal Linkedin Kevin Nguyen"></a>
+                                </div>
                             </div>
-                        </div>
-                </figcaption>
-              </figure>
-            </article>
-                <div class="k-descrip row">
-                        <p class="col-md-12 col-xs-12">Wanna know more about me?</p>
-                        <article class="col-md-6 col-xs-6">
-                            <img class="col-md-2 col-xs-4" src="assets/img/languages.svg" alt="Languages logo">
-                            <div class="col-md-10 col-xs-8">
-                                <h4>I speak</h4>
-                                <p>Is this real life, or is this just fantasy?</p>
-                            </div>
-                        </article>
-                        <article class="col-md-6 col-xs-6">
-                              <img class="col-md-2 col-xs-" src="assets/img/travel.svg" alt="Travel logo">
-                              <div class="col-md-10">
-                                  <h4>I speak</h4>
-                                  <p>Is this real life, or is this just fantasy?</p>
-                              </div>
-                        </article>
-                        <article class="col-md-6 col-xs-6">
-                            <img class="col-md-2" src="assets/img/games.svg" alt="Practice logo">
-                            <div class="col-md-10">
-                                <h4>I speak</h4>
-                                <p>Is this real life, or is this just fantasy?</p>
-                            </div>
-                        </article>
-                        <article class="col-md-6 col-xs-6">
-                            <img class="col-md-2" src="assets/img/pracc.svg" alt="Play logo">
-                            <div class="col-md-10">
-                                <h4>I speak</h4>
-                                <p>Is this real life, or is this just fantasy?</p>
-                            </div>
-                        </article>
-                    </div>
-        </section>
-<section id="k-works"   class="row center-block">
-    <article class="row">
-        <h2 class="k-titlesection pull-left">My Work</h2>
-        <?php for($a=0;$a<=1;$a++) : ?>
-            <div class="row">
-                <figure class="col-md-12 col-xs-12">
-                    <?php for($i = 0; $i <= 3; $i ++) : ?>
-                        <figcaption class="k-frame col-md-4">
-                            <div class="k-imgwork">
-                                <img src="assets/img/kebab.jpg" alt="My Work"/>
-                                    <div class="k-details">
-                                        <h1>My Kebab</h1>
-                                        <p class="col-md-12">Lorem ipsum dolor. Aenean scelerisque odio ut dui feugiat commodo. Nulla blandit erat vel nisi consectetur ac pharetra augue consectetur</p>
-                                        <a href="#">Find out more</a>
-                                    </div>
-                            </div>
-                        </figcaption>
-                    <?php endfor; ?>
-                </figure>
-            </div>
-        <?php endfor ;?>
-    </article>
-</section>
-
-
-        <section id="k-showcase" class="row">
-              <article class="row">
-
-                  <h2 class="k-titlesection pull-left">My Showcase</h2>
-
-                  <div id="k-rousel" class="carousel slide" data-ride="carousel">
-                  <!-- Indicators -->
-                  <ol class="carousel-indicators">
-                    <li data-target="#k-rousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#k-rousel" data-slide-to="1"></li>
-                    <li data-target="#k-rousel" data-slide-to="2"></li>
-                    <li data-target="#k-rousel" data-slide-to="3"></li>
-                  </ol>
-
-                  <!-- Wrapper for slides -->
-                  <div class="carousel-inner center-block" role="listbox">
-                    <div class="item active">
-                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
-                    </div>
-
-                    <div class="item">
-                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
-                    </div>
-
-                    <div class="item">
-                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
-                    </div>
-
-                    <div class="item">
-                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
-                    </div>
-                  </div>
-
-                  <!-- Left and right controls -->
-                  <a class="left carousel-control" href="#k-rousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" style="color:#ED5758;" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                  </a>
-                  <a class="right carousel-control" href="#k-rousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" style="color:#ED5758;" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                  </a>
-                </div>
+                    </figcaption>
+                  </figure>
                 </article>
-        </section>
-              <script type="text/javascript">
-              $('.carousel').carousel()
-              </script>
-        <section id="k-skills"   class="row">
-          <article class="col-md-12">
-            <h2>Technical Skills</h2>*
-            <div class="row">
-              <div class="col-md-6">
-                <h4 class="col-md-6">Programmation</h4>
-                  <figcaption class="col-md-12">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                  </figcaption>
-              </div>
-              <div class="col-md-6">
-                <h4 class="col-md-6">Graphisme</h4>
-                  <figcaption class="col-md-12">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                  </figcaption>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <h4 class="col-md-6">Framework</h4>
-                  <figcaption class="col-md-12">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                  </figcaption>
-              </div>
-              <div class="col-md-6">
-                <h4 class="col-md-6">Database</h4>
-                  <figcaption class="col-md-12">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                  </figcaption>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <h4 class="col-md-6">CMS</h4>
-                  <figcaption class="col-md-12">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                  </figcaption>
-              </div>
-              <div class="col-md-6">
-                <h4 class="col-md-6">Other</h4>
-                  <figcaption class="col-md-12">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                    <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                  </figcaption>
-              </div>
-            </div>
-          </article>
-        </section>
-        <section id="k-contact"  class="row">
-          <article class="col-md-12">
-            <div class="row">
-              <h2>Contact me</h2>
-            </div>
-          </article>
-            <form class="form-group" action="" method="post" novalidate="">
-              <div class=" col-md-6">
-                <label for="name">Firstname Lastname*</label>
-                <input name="name" type="text" class="form-control" id="" placeholder="First name & Last name">
-              </div>
-              <div class="col-md-6">
-                  <label for="email">Email*</label>
-                  <input name="email" type="text" class="form-control" id="" placeholder="Email">
-              </div>
-              <div class="col-md-12">
-                  <label for="message">Message</label>
-                  <textarea name="message" class="form-control" rows="8" cols="80" placeholder="Write your message"></textarea>
-                  <button class="btn btn-default" type="submit" name="button">Send </button>
-              </div>
-            </form>
-        </section>
+                    <div class="k-descrip row">
+
+                    </div>
+            </section>
+            <section id="k-works"    class="section row center-block">
+        <article class="row">
+            <h2 class="k-titlesection pull-left">My Work</h2>
+            <?php for($a=0;$a<=1;$a++) : ?>
+                <div class="row">
+                    <figure class="col-md-12 col-xs-12">
+                        <?php for($i = 0; $i <= 3; $i ++) : ?>
+                            <figcaption class="k-frame col-md-4">
+                                <div class="k-imgwork">
+                                    <img src="assets/img/kebab.jpg" alt="My Work"/>
+                                        <div class="k-details">
+                                            <h1>My Kebab</h1>
+                                            <p class="col-md-12">Lorem ipsum dolor. Aenean scelerisque odio ut dui feugiat commodo. Nulla blandit erat vel nisi consectetur ac pharetra augue consectetur</p>
+                                            <a href="#">Find out more</a>
+                                        </div>
+                                </div>
+                            </figcaption>
+                        <?php endfor; ?>
+                    </figure>
+                </div>
+            <?php endfor ;?>
+        </article>
+    </section>
+            <section id="k-showcase" class="section row">
+                  <article class="row">
+
+                      <h2 class="k-titlesection pull-left">My Showcase</h2>
+
+                      <div id="k-rousel" class="carousel slide" data-ride="carousel">
+                      <!-- Indicators -->
+                      <ol class="carousel-indicators">
+                        <li data-target="#k-rousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#k-rousel" data-slide-to="1"></li>
+                        <li data-target="#k-rousel" data-slide-to="2"></li>
+                        <li data-target="#k-rousel" data-slide-to="3"></li>
+                      </ol>
+
+                      <!-- Wrapper for slides -->
+                      <div class="carousel-inner center-block" role="listbox">
+                        <div class="item active">
+                          <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                        </div>
+
+                        <div class="item">
+                          <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                        </div>
+
+                        <div class="item">
+                          <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                        </div>
+
+                        <div class="item">
+                          <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                        </div>
+                      </div>
+
+                      <!-- Left and right controls -->
+                      <a class="left carousel-control" href="#k-rousel" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" style="color:#ED5758;" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="right carousel-control" href="#k-rousel" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" style="color:#ED5758;" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                    </article>
+            </section>
+            <script type="text/javascript">
+                  $('.carousel').carousel()
+                  </script>
+            <section id="k-skills"   class="section row">
+              <article class="col-md-12">
+                <h2>Technical Skills</h2>*
+                <div class="row">
+                  <div class="col-md-6">
+                    <h4 class="col-md-6">Programmation</h4>
+                      <figcaption class="col-md-12">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                      </figcaption>
+                  </div>
+                  <div class="col-md-6">
+                    <h4 class="col-md-6">Graphisme</h4>
+                      <figcaption class="col-md-12">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                      </figcaption>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h4 class="col-md-6">Framework</h4>
+                      <figcaption class="col-md-12">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                      </figcaption>
+                  </div>
+                  <div class="col-md-6">
+                    <h4 class="col-md-6">Database</h4>
+                      <figcaption class="col-md-12">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                      </figcaption>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <h4 class="col-md-6">CMS</h4>
+                      <figcaption class="col-md-12">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                      </figcaption>
+                  </div>
+                  <div class="col-md-6">
+                    <h4 class="col-md-6">Other</h4>
+                      <figcaption class="col-md-12">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
+                      </figcaption>
+                  </div>
+                </div>
+              </article>
+            </section>
+            <section id="k-contact"  class="section row">
+              <article class="col-md-12">
+                <div class="row">
+                  <h2>Contact me</h2>
+                </div>
+              </article>
+                <form class="form-group" action="" method="post" novalidate="">
+                  <div class=" col-md-6">
+                    <label for="name">Firstname Lastname*</label>
+                    <input name="name" type="text" class="form-control" id="" placeholder="First name & Last name">
+                  </div>
+                  <div class="col-md-6">
+                      <label for="email">Email*</label>
+                      <input name="email" type="text" class="form-control" id="" placeholder="Email">
+                  </div>
+                  <div class="col-md-12">
+                      <label for="message">Message</label>
+                      <textarea name="message" class="form-control" rows="8" cols="80" placeholder="Write your message"></textarea>
+                      <button class="btn btn-default" type="submit" name="button">Send </button>
+                  </div>
+                </form>
+            </section>
     </main>
     <footer id="k-foot" class="row">
       <nav>
@@ -300,6 +271,8 @@
 
     });
     </script>
+</div>
+
 </footer>
 </body>
 </html>
