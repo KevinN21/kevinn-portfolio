@@ -65,12 +65,12 @@ body:after {
   height: 100%;
   position: absolute; }
 
-#k-header,
 #k-abtme,
-#k-works,
-#k-skills,
+#k-contact,
+#k-header,
 #k-showcase,
-#k-contact {
+#k-skills,
+#k-works {
   position: relative;
   height: 100vh;
   width: 100%; }
@@ -240,15 +240,16 @@ nav {
     -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
     box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75); }
-  #k-works figure {
-    float: left;
-    margin-bottom: 3%; }
-    #k-works figure figcaption {
-      width: 19%;
-      margin: 0; }
-      #k-works figure figcaption img {
-        width: 100%;
-        height: 100%; }
+  #k-works .k-mywork {
+    margin-top: 7%; }
+    #k-works .k-mywork figure {
+      float: left; }
+      #k-works .k-mywork figure figcaption {
+        width: 19%;
+        margin: 3%; }
+        #k-works .k-mywork figure figcaption img {
+          width: 100%;
+          height: 100%; }
   #k-works .k-frame {
     height: 100%;
     margin: 0 3%;
@@ -263,7 +264,7 @@ nav {
         top: 0;
         left: 0;
         transform: rotate(0deg); }
-        #k-works .k-frame .k-imgwork:hover .k-details h1 {
+        #k-works .k-frame .k-imgwork:hover .k-details h3 {
           left: 0;
           transition-delay: 200ms; }
         #k-works .k-frame .k-imgwork:hover .k-details a {
@@ -288,7 +289,7 @@ nav {
         top: -100%;
         transition: all 200ms linear;
         transform: rotate(90deg); }
-        #k-works .k-frame .k-imgwork .k-details h1 {
+        #k-works .k-frame .k-imgwork .k-details h3 {
           padding: 0.2em 0.3em;
           background: rgba(237, 87, 88, 0.8);
           position: absolute;
@@ -335,26 +336,109 @@ nav {
     height: 99vh; }
     #k-showcase #k-rousel img {
       margin: auto;
-      width: auto;
-      height: 40vh; }
+      width: auto; }
     #k-showcase #k-rousel .carousel-control.left,
     #k-showcase #k-rousel .carousel-control.right {
       background-image: none; }
     #k-showcase #k-rousel .carousel-indicators .active {
       background-color: #ED5758; }
 
-#k-skills .k-titlesection {
-  position: absolute;
-  top: 4%;
-  left: -1%;
-  padding: 0.5% 3%;
-  font-family: "Corbel";
-  font-variant: small-caps;
-  font-weight: bolder;
-  color: #fff;
-  background-color: #ED5758;
-  -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
-  box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75); }
+#k-skills {
+  background: #eee; }
+  #k-skills .k-titlesection {
+    position: absolute;
+    top: 4%;
+    left: -1%;
+    padding: 0.5% 3%;
+    font-family: "Corbel";
+    font-variant: small-caps;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #ED5758;
+    -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75); }
+  #k-skills .k-whatido {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10%; }
+    #k-skills .k-whatido img {
+      cursor: pointer;
+      width: 100%; }
+    #k-skills .k-whatido img:active {
+      padding: 0;
+      transform: translateY(20px);
+      -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+      border-radius: 100%; }
+    #k-skills .k-whatido .k-ribbon {
+      font-family: "Corbel";
+      font-variant: small-caps;
+      font-size: 2em;
+      color: #fff;
+      margin-top: 10%;
+      padding: 0.5em 0;
+      border: 2px solid #ddd;
+      background: #B7B7B7; }
+  #k-skills .modal-content {
+    border-radius: 0; }
+    #k-skills .modal-content .modal-header {
+      font-family: "Corbel";
+      color: #000;
+      font-variant: small-caps;
+      border: none; }
+    #k-skills .modal-content .modal-body {
+      font-family: "Corbel"; }
+    #k-skills .modal-content .modal-footer {
+      border: none; }
+      #k-skills .modal-content .modal-footer .btn-default {
+        font-family: "Corbel";
+        color: #fff;
+        font-variant: small-caps;
+        background-color: #ED5758;
+        border-color: #fff; }
+      #k-skills .modal-content .modal-footer .btn {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.42857143;
+        text-align: center;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        background-image: none;
+        border: 1px solid transparent;
+        border-radius: 0px; }
+      #k-skills .modal-content .modal-footer .btn.active.focus, #k-skills .modal-content .modal-footer .btn.active:focus, #k-skills .modal-content .modal-footer .btn.focus, #k-skills .modal-content .modal-footer .btn:active.focus, #k-skills .modal-content .modal-footer .btn:active:focus, #k-skills .modal-content .modal-footer .btn:focus {
+        outline: 0px; }
+
+#k-contact {
+  background-image: url("../img/water.gif");
+  background-size: cover; }
+  #k-contact .k-titlesection {
+    position: absolute;
+    top: 4%;
+    left: -1%;
+    padding: 0.5% 3%;
+    font-family: "Corbel";
+    font-variant: small-caps;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #ED5758;
+    -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+    box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+    margin-top: 3%; }
+  #k-contact form {
+    margin-top: 10%; }
 
 /*# sourceMappingURL=global.css.map */

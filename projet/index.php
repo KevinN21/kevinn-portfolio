@@ -58,9 +58,9 @@
                 <div class="collapse navbar-collapse" id="k-navbar">
                     <ul class="nav navbar-nav">
                         <li><a href="#k-abtme">About</a></li>
-                        <li><a href="#k-works">Work</a></li>
+                        <li><a href="#k-works">Works</a></li>
                         <li><a href="#k-showcase">Showcase</a></li>
-                        <li><a href="#k-skills">Skill</a></li>
+                        <li><a href="#k-skills">Skills</a></li>
                         <li><a href="#k-contact">Contact</a></li>
                     </ul>
                 </div>
@@ -128,24 +128,26 @@
             <section id="k-works"    class="section row text-center">
                 <article class="row">
                     <h2 class="k-titlesection pull-left">My Work</h2>
-                    <?php for($a=0;$a<=1;$a++) : ?>
-                        <div class="row">
-                            <figure class="col-md-12 col-xs-12">
-                                <?php for($i = 0; $i <= 3; $i ++) : ?>
-                                    <figcaption class="k-frame col-md-4">
-                                        <div class="k-imgwork">
-                                            <img src="assets/img/kebab.jpg" alt="My Work"/>
-                                                <div class="k-details">
-                                                    <h1>My Kebab</h1>
-                                                    <p class="col-md-12">Lorem ipsum dolor. Aenean scelerisque odio ut dui feugiat commodo. Nulla blandit erat vel nisi consectetur ac pharetra augue consectetur</p>
-                                                    <a href="#">Find out more</a>
+                        <div class="k-mywork">
+                            <?php for($a=0;$a<=1;$a++) : ?>
+                                <div class="row">
+                                    <figure class="col-md-12 col-xs-12">
+                                        <?php for($i = 0; $i <= 3; $i ++) : ?>
+                                            <figcaption class="k-frame col-md-4">
+                                                <div class="k-imgwork">
+                                                    <img src="assets/img/kebab.jpg" alt="My Work"/>
+                                                        <div class="k-details">
+                                                            <h3>My Kebab</h3>
+                                                            <p class="col-md-10">Lorem ipsum dolor. Aenean scelerisque odio ut dui feugiat commodo. Nulla blandit erat vel nisi consectetur ac pharetra augue consectetur</p>
+                                                            <a href="#">Find out more</a>
+                                                        </div>
                                                 </div>
-                                        </div>
-                                    </figcaption>
-                                <?php endfor; ?>
-                            </figure>
+                                            </figcaption>
+                                        <?php endfor; ?>
+                                    </figure>
+                                </div>
+                            <?php endfor ;?>
                         </div>
-                    <?php endfor ;?>
                 </article>
             </section>
             <section id="k-showcase" class="section row">
@@ -195,12 +197,27 @@
                                 </script>
             </section>
             <section id="k-skills"   class="section row">
-              <div class="col-md-12">
+              <div class="row">
                 <h2 class="k-titlesection pull left">Technical Skills</h2>
-
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#k-modal" data-title="Web" data-skills="web" >Web</button>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#k-modal" data-title="Tool" data-skills="tool" >Tool</button>
-                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#k-modal" data-title="Stuff" data-skills="stuff" >Stuff</button>
+                    <article class="k-whatido row text-center">
+                            <div class="col-md-3 col-xs-12">
+                                <img data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I do" data-skills="web" src="assets/svg/web.svg" alt="What I do">
+                                <p class="k-ribbon">Web Development</p>
+                            </div>
+                            <div class="col-md-3 col-xs-12">
+                                <img  data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I use" data-skills="tools" src="assets/svg/tools.svg" alt="My tools">
+                                <p class="k-ribbon">Softwares</p>
+                            </div>
+                            <div class="col-md-3 col-xs-12">
+                                <img  data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I like" data-skills="hobbies" src="assets/svg/hobby.svg" alt="My hobbies">
+                                <p class="k-ribbon">During my free Time</p>
+                            </div>
+                    </article>
+                        <script type="text/javascript">
+                            $(function () {
+                            $('[data-supp="tooltip"]').tooltip()
+                            })
+                        </script>
 
                         <div class="modal fade" id="k-modal" tabindex="-1" role="dialog" aria-labelledby="kModalLabel">
                           <div class="modal-dialog" role="document">
@@ -210,7 +227,9 @@
                                 <h4 class="modal-title" id="kModalLabel"></h4>
                               </div>
                               <div class="modal-body">
-
+                                  <img id="k-imgs-web" src="" alt="Logo Languages">
+                                  <!-- <img id="k-imgs-tool" src="" alt="Logo Languages">
+                                  <img id="k-imgs-hobby" src="" alt="Logo Languages"> -->
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -224,32 +243,34 @@
                  skills = {
                      web:
                         {
-                            image:'html.svg',
+                            image:'assets/svg/css.svg',
                         },
-                    tool:
+                    tools:
                         {
-                            image:'coucou.jpg',
+                            image:'assets/svg/github.svg',
                         },
-                    stuff:
+                    hobbies:
                         {
-                            image:'wesh.jpg',
+                            image:'asset/svg/psd.svg',
                         }
                 };
                     $('#k-modal').on('show.bs.modal', function (event) {
                       var button = $(event.relatedTarget) // Button that triggered the modal
-                      console.log(button.data('skills'));
-                     console.log(skills[button.data('skills')]);
                       var modal = $(this);
-                      var html = "";
+                      var html = '';
                       var tab = skills[button.data('skills')];
                       $(tab).each(function( index ) {
-                          console.log( this.image );
-                          html += '<ul><li>' + this.image + '</li></ul>' ;
-                          html += '<p>' + this.nom + '</p>';
+                          $("#k-imgs-web").attr("src",skills.web.image);
+                        //   $("#k-imgs-tool").attr("src",skills.tools.image);
+                        //   $("#k-imgs-hobby").attr("src",skills.hobbies.image);
+
+
+                          console.log(skills.web.image);
+                          html += this.image ;
                       });
                         console.log(html);
-                      modal.find('.modal-title').text('Skills ' + button.data('title'))
-                      modal.find('.modal-body').text(html);
+                      modal.find('.modal-title').text(button.data('title'))
+                    //   modal.find('.modal-body').text(html);
                     })
 
                 </script>
@@ -258,21 +279,25 @@
             <section id="k-contact"  class="section row">
               <article class="col-md-12">
                     <div class="row">
-                      <h2>Contact me</h2>
+                      <h2 class="pull-left k-titlesection">Contact me</h2>
                     </div>
                   </article>
                     <form class="form-group" action="" method="post" novalidate="">
                       <div class=" col-md-6">
-                        <label for="name">Firstname Lastname*</label>
-                        <input name="name" type="text" class="form-control" id="" placeholder="First name & Last name">
+                        <label for="name">Lastname*</label>
+                        <input id="inputname" name="name" type="text" class="form-control" id="" placeholder="First name & Last name">
                       </div>
                       <div class="col-md-6">
-                          <label for="email">Email*</label>
-                          <input name="email" type="text" class="form-control" id="" placeholder="Email">
+                          <label for="firstname">Firstname*</label>
+                          <input id="inputfirstname" name="firstname" type="text" class="form-control" id="" placeholder="Email">
+                      </div>
+                      <div class="col-md-12">
+                          <label for="email">Email *</label>
+                          <input id="inputemail" name="email" type="text" class="form-control" id="" placeholder="Email">
                       </div>
                       <div class="col-md-12">
                           <label for="message">Message</label>
-                          <textarea name="message" class="form-control" rows="8" cols="80" placeholder="Write your message"></textarea>
+                          <textarea id="inputmsg" name="message" class="form-control" rows="8" cols="80" placeholder="Write your message"></textarea>
                           <button class="btn btn-default" type="submit" name="button">Send </button>
                       </div>
                     </form>
