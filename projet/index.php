@@ -35,13 +35,13 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.js"></script>
+
+            <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.js"></script> -->
         <script src="assets/js/global.js"></script>
 
-      <title>Kevin Nguyen's Portfolio</title>
+      <title>Kevin Nguyen | Web Developper</title>
     </head>
 <body>
-<div id="fullpage">
     <header id="k-header" class=" text-center">
         <nav class="k-navbar navbar navbar-default">
             <div  class="container-fluid">
@@ -79,200 +79,229 @@
     <main class="container-fluid">
             <section id="k-abtme"    class="section row text-center">
                 <h2 class="k-titlesection pull-left">About me</h2>
-                <article class="row">
-                <figure class="col-xs-12">
-                    <figcaption>
-                        <img class="k-face" src="assets/img/Kevin-Nguyen.jpg" alt="Ma tête Kevin Nguyen">
-                            <div class="k-name">
-                                <h2 class="">Kevin <span>N</span>guyen</h2>
-                                <h3 class="">Developper <span>W</span>eb</h3>
-                                <div class="k-social">
-                                    <a href="https://github.com/KevinN21"><img src="assets/img/github.svg" target='_blank' alt="Personal GitHub Kevin Nguyen"></a>
-                                    <a href="https://www.linkedin.com/in/kevin21-nguyen"><img src="assets/img/linkedin.svg" target='_blank' alt="Personal Linkedin Kevin Nguyen"></a>
-                                </div>
+                <div class="col-md-12">
+                    <article class="k-name col-md-6 text-center">
+                        <h2>Kevin Nguyen</h2>
+                        <h3>Developper Web</h3>
+
+                        <div class="k-counter">
+                            <div class="col-md-3">
+                                <p class="count">721</p>
+                                <p>cups of coffee</p>
                             </div>
-                    </figcaption>
-                  </figure>
-                </article>
-                    <div class="k-descrip row">
-
-                    </div>
-            </section>
-            <section id="k-works"    class="section row center-block">
-        <article class="row">
-            <h2 class="k-titlesection pull-left">My Work</h2>
-            <?php for($a=0;$a<=1;$a++) : ?>
-                <div class="row">
-                    <figure class="col-md-12 col-xs-12">
-                        <?php for($i = 0; $i <= 3; $i ++) : ?>
-                            <figcaption class="k-frame col-md-4">
-                                <div class="k-imgwork">
-                                    <img src="assets/img/kebab.jpg" alt="My Work"/>
-                                        <div class="k-details">
-                                            <h1>My Kebab</h1>
-                                            <p class="col-md-12">Lorem ipsum dolor. Aenean scelerisque odio ut dui feugiat commodo. Nulla blandit erat vel nisi consectetur ac pharetra augue consectetur</p>
-                                            <a href="#">Find out more</a>
-                                        </div>
-                                </div>
-                            </figcaption>
-                        <?php endfor; ?>
-                    </figure>
-                </div>
-            <?php endfor ;?>
-        </article>
-    </section>
-            <section id="k-showcase" class="section row">
-                  <article class="row">
-
-                      <h2 class="k-titlesection pull-left">My Showcase</h2>
-
-                      <div id="k-rousel" class="carousel slide" data-ride="carousel">
-                      <!-- Indicators -->
-                      <ol class="carousel-indicators">
-                        <li data-target="#k-rousel" data-slide-to="0" class="active"></li>
-                        <li data-target="#k-rousel" data-slide-to="1"></li>
-                        <li data-target="#k-rousel" data-slide-to="2"></li>
-                        <li data-target="#k-rousel" data-slide-to="3"></li>
-                      </ol>
-
-                      <!-- Wrapper for slides -->
-                      <div class="carousel-inner center-block" role="listbox">
-                        <div class="item active">
-                          <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                            <div class="col-md-3">
+                                <p class="count">1639270</p>
+                                <p>lines</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="count">13</p>
+                                <p>projects</p>
+                            </div>
+                            <div class="col-md-3">
+                                <p class="count">84</p>
+                                <p>MC Donald's</p>
+                            </div>
+                                <script type="text/javascript">
+                                    $('.count').each(function () {
+                                        $(this).prop('Counter',0).animate({
+                                            Counter: $(this).text()
+                                        }, {
+                                            duration: 5000,
+                                            easing: 'linear',
+                                            step: function (now) {
+                                                $(this).text(Math.ceil(now));
+                                            }
+                                        });
+                                    });
+                                </script>
                         </div>
-
-                        <div class="item">
-                          <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
-                        </div>
-
-                        <div class="item">
-                          <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
-                        </div>
-
-                        <div class="item">
-                          <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
-                        </div>
-                      </div>
-
-                      <!-- Left and right controls -->
-                      <a class="left carousel-control" href="#k-rousel" role="button" data-slide="prev">
-                        <span class="glyphicon glyphicon-chevron-left" style="color:#ED5758;" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                      </a>
-                      <a class="right carousel-control" href="#k-rousel" role="button" data-slide="next">
-                        <span class="glyphicon glyphicon-chevron-right" style="color:#ED5758;" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                      </a>
-                    </div>
                     </article>
+                    <article class="col-md-6">
+                        <figure>
+                            <figcaption>
+                                <img src="./assets/img/kebab.jpg" alt="">
+                            </figcaption>
+                        </figure>
+                    </article>
+                </div>
             </section>
-            <script type="text/javascript">
-                  $('.carousel').carousel()
-                  </script>
+            <section id="k-works"    class="section row text-center">
+                <article class="row">
+                    <h2 class="k-titlesection pull-left">My Work</h2>
+                    <?php for($a=0;$a<=1;$a++) : ?>
+                        <div class="row">
+                            <figure class="col-md-12 col-xs-12">
+                                <?php for($i = 0; $i <= 3; $i ++) : ?>
+                                    <figcaption class="k-frame col-md-4">
+                                        <div class="k-imgwork">
+                                            <img src="assets/img/kebab.jpg" alt="My Work"/>
+                                                <div class="k-details">
+                                                    <h1>My Kebab</h1>
+                                                    <p class="col-md-12">Lorem ipsum dolor. Aenean scelerisque odio ut dui feugiat commodo. Nulla blandit erat vel nisi consectetur ac pharetra augue consectetur</p>
+                                                    <a href="#">Find out more</a>
+                                                </div>
+                                        </div>
+                                    </figcaption>
+                                <?php endfor; ?>
+                            </figure>
+                        </div>
+                    <?php endfor ;?>
+                </article>
+            </section>
+            <section id="k-showcase" class="section row">
+                <article class="row">
+                      <h2 class="k-titlesection pull-left">My Showcase</h2>
+                             <div id="k-rousel" class="carousel slide" data-ride="carousel">
+                                  <!-- Indicators -->
+                                  <ol class="carousel-indicators">
+                                    <li data-target="#k-rousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#k-rousel" data-slide-to="1"></li>
+                                    <li data-target="#k-rousel" data-slide-to="2"></li>
+                                    <li data-target="#k-rousel" data-slide-to="3"></li>
+                                  </ol>
+
+                                  <!-- Wrapper for slides -->
+                                  <div class="carousel-inner center-block" role="listbox">
+                                    <div class="item active">
+                                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                                    </div>
+
+                                    <div class="item">
+                                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                                    </div>
+
+                                    <div class="item">
+                                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                                    </div>
+
+                                    <div class="item">
+                                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                                    </div>
+                                  </div>
+
+                                  <!-- Left and right controls -->
+                                  <a class="left carousel-control" href="#k-rousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" style="color:#ED5758;" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                  </a>
+                                  <a class="right carousel-control" href="#k-rousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" style="color:#ED5758;" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                  </a>
+                                </div>
+                                </article>
+                                <script type="text/javascript">
+                                $('.carousel').carousel()
+                                </script>
+            </section>
             <section id="k-skills"   class="section row">
-              <article class="col-md-12">
-                <h2>Technical Skills</h2>*
-                <div class="row">
-                  <div class="col-md-6">
-                    <h4 class="col-md-6">Programmation</h4>
-                      <figcaption class="col-md-12">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                      </figcaption>
-                  </div>
-                  <div class="col-md-6">
-                    <h4 class="col-md-6">Graphisme</h4>
-                      <figcaption class="col-md-12">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                      </figcaption>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <h4 class="col-md-6">Framework</h4>
-                      <figcaption class="col-md-12">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                      </figcaption>
-                  </div>
-                  <div class="col-md-6">
-                    <h4 class="col-md-6">Database</h4>
-                      <figcaption class="col-md-12">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                      </figcaption>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <h4 class="col-md-6">CMS</h4>
-                      <figcaption class="col-md-12">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                      </figcaption>
-                  </div>
-                  <div class="col-md-6">
-                    <h4 class="col-md-6">Other</h4>
-                      <figcaption class="col-md-12">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                        <img src="assets/img/kebab.jpg" alt="" style="width:20%;">
-                      </figcaption>
-                  </div>
-                </div>
-              </article>
+              <div class="col-md-12">
+                <h2 class="k-titlesection pull left">Technical Skills</h2>
+
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#k-modal" data-title="Web" data-skills="web" >Web</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#k-modal" data-title="Tool" data-skills="tool" >Tool</button>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#k-modal" data-title="Stuff" data-skills="stuff" >Stuff</button>
+
+                        <div class="modal fade" id="k-modal" tabindex="-1" role="dialog" aria-labelledby="kModalLabel">
+                          <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="kModalLabel"></h4>
+                              </div>
+                              <div class="modal-body">
+
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+
+                 <script type="text/javascript">
+                 skills = {
+                     web:
+                        {
+                            image:'html.svg',
+                        },
+                    tool:
+                        {
+                            image:'coucou.jpg',
+                        },
+                    stuff:
+                        {
+                            image:'wesh.jpg',
+                        }
+                };
+                    $('#k-modal').on('show.bs.modal', function (event) {
+                      var button = $(event.relatedTarget) // Button that triggered the modal
+                      console.log(button.data('skills'));
+                     console.log(skills[button.data('skills')]);
+                      var modal = $(this);
+                      var html = "";
+                      var tab = skills[button.data('skills')];
+                      $(tab).each(function( index ) {
+                          console.log( this.image );
+                          html += '<ul><li>' + this.image + '</li></ul>' ;
+                          html += '<p>' + this.nom + '</p>';
+                      });
+                        console.log(html);
+                      modal.find('.modal-title').text('Skills ' + button.data('title'))
+                      modal.find('.modal-body').text(html);
+                    })
+
+                </script>
+              </div>
             </section>
             <section id="k-contact"  class="section row">
               <article class="col-md-12">
-                <div class="row">
-                  <h2>Contact me</h2>
-                </div>
-              </article>
-                <form class="form-group" action="" method="post" novalidate="">
-                  <div class=" col-md-6">
-                    <label for="name">Firstname Lastname*</label>
-                    <input name="name" type="text" class="form-control" id="" placeholder="First name & Last name">
-                  </div>
-                  <div class="col-md-6">
-                      <label for="email">Email*</label>
-                      <input name="email" type="text" class="form-control" id="" placeholder="Email">
-                  </div>
-                  <div class="col-md-12">
-                      <label for="message">Message</label>
-                      <textarea name="message" class="form-control" rows="8" cols="80" placeholder="Write your message"></textarea>
-                      <button class="btn btn-default" type="submit" name="button">Send </button>
-                  </div>
-                </form>
+                    <div class="row">
+                      <h2>Contact me</h2>
+                    </div>
+                  </article>
+                    <form class="form-group" action="" method="post" novalidate="">
+                      <div class=" col-md-6">
+                        <label for="name">Firstname Lastname*</label>
+                        <input name="name" type="text" class="form-control" id="" placeholder="First name & Last name">
+                      </div>
+                      <div class="col-md-6">
+                          <label for="email">Email*</label>
+                          <input name="email" type="text" class="form-control" id="" placeholder="Email">
+                      </div>
+                      <div class="col-md-12">
+                          <label for="message">Message</label>
+                          <textarea name="message" class="form-control" rows="8" cols="80" placeholder="Write your message"></textarea>
+                          <button class="btn btn-default" type="submit" name="button">Send </button>
+                      </div>
+                    </form>
             </section>
     </main>
     <footer id="k-foot" class="row">
-      <nav>
-        <ul>
-          <li>Kevin Nguyen © - 2017</li>
-          <li><i class="fa fa-envelope"></i> kevin21.nguyen@gmail.com for business inquieris</li>
-          <li><i class="fa fa-phone"></i> +33 6 70 31 77 85</li>
-        </ul>
-      </nav>
-      <div class="KW_progressContainer">
+          <nav>
+            <ul>
+              <li>Kevin Nguyen © - 2017</li>
+              <li><i class="fa fa-envelope"></i> kevin21.nguyen@gmail.com for business inquieris</li>
+              <li><i class="fa fa-phone"></i> +33 6 70 31 77 85</li>
+            </ul>
+          </nav>
+          <div class="KW_progressContainer">
 		<div class="KW_progressBar">
-    <script type="text/javascript">
-        $(window).load(function(){
-      $(window).scroll(function() {
-        var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
-        var totalScroll = (wintop/(docheight-winheight))*100;
-        $(".KW_progressBar").css("width",totalScroll+"%");
-      });
+            <script type="text/javascript">
+                $(window).load(function(){
+              $(window).scroll(function() {
+                var wintop = $(window).scrollTop(), docheight = $('body').height(), winheight = $(window).height();
+                var totalScroll = (wintop/(docheight-winheight))*100;
+                $(".KW_progressBar").css("width",totalScroll+"%");
+              });
 
-    });
-    </script>
-</div>
+            });
+            </script>
+        </div>
+      </div>
+    </footer>
 
-</footer>
+
 </body>
 </html>

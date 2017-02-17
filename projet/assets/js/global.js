@@ -14,16 +14,18 @@ $(window).scroll(function() {
 /*------------------------------------------------------ */
 $(window).load(function(){
   $(window).scroll(function() {
-    var wintop = $(window).scrollTop(), docheight = $('article').height(), winheight = $(window).height();
-    var totalScroll = (wintop/(docheight-winheight))*100;
+    var wintop = $(window).scrollTop(),
+        docheight = $('body').height(),
+        winheight = $(window).height();
+    var totalScroll = (wintop/(docheight-winheight))*1000;
     $(".KW_progressBar").css("width",totalScroll+"%");
   });
 
 });
 
-/*----------------------------------------------------*/
-/* Start Fullpage JS
-/*------------------------------------------------------ */
-$(document).ready(function() {
-    $('#fullpage').fullpage();
-});
+// /*----------------------------------------------------*/
+// /* Start Fullpage JS
+// /*------------------------------------------------------ */
+// $(document).ready(function() {
+//     $('#fullpage').fullpage();
+// });

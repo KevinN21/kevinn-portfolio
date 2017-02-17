@@ -1,24 +1,22 @@
 // ---------- Font Variable
-$primaryfont: 'Verdana';
 $titlefont: 'Corbel';
-$navfont: 'Corbel'; //---------- Fin Font Variable
+$navfont: 'Corbel';
+ //---------- Fin Font Variable
 //---------- Color
 $actioncolor: #ED5758;
 $titlecolor: #4D4D4D;
 $bgcolor: #B7B7B7;
-$fontcolor: #000; //----------  Fin Color
-@font-face {
-    font-family: 'Harlow';
-    src: url('../font/HarlowSolid.ttf');
-}
+$fontcolor: #000;
+ //----------  Fin Color
+@import url('https://fonts.googleapis.com/css?family=Montserrat:900');
+//font-family: 'Montserrat', sans-serif;
+
+
 @font-face {
     font-family: 'Corbel';
     src: url('../font/Corbel.ttf');
 }
-@font-face {
-    font-family: 'Consolas';
-    src: url('../font/Consolas.ttf');
-}
+
 // RESET
 
 * {
@@ -36,7 +34,24 @@ $fontcolor: #000; //----------  Fin Color
     margin: 0;
 }
 //---------- header background ----------//
-//---------- MISC ----------------------//
+//---------- MIXIN & MISC ----------------------//
+@mixin title-ribbon(){
+    position:absolute;
+    top:4%;
+    left:-1%;
+    padding: 0.5% 3%;
+    font-family: $navfont;
+    font-variant: small-caps;
+    font-weight: bolder;
+    color: #fff;
+    background-color: $actioncolor;
+
+    -webkit-box-shadow: 4px 4px 20px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 20px 1px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 20px 1px rgba(0,0,0,0.75);
+}
+
+
 
 .KW_progressContainer {
     left: 0;
@@ -64,7 +79,7 @@ $fontcolor: #000; //----------  Fin Color
 
 body {
     width: 100vw;
-    height: 90vh;
+    height: 100vh;
     overflow-x: hidden;
     background-size: cover;
     z-index: -8;
@@ -97,10 +112,14 @@ body:after {
 //---------- Fin header background ----------//
 
 
-#k-abtme,
-#k-contact,
 #k-header,
-#k-works #k-showcase {
+#k-abtme,
+#k-works,
+#k-skills,
+#k-showcase,
+#k-contact
+{
+    position: relative;
     height: 100vh;
     width: 100%;
 }
@@ -251,103 +270,50 @@ nav {
 }
 //---------- FIN NAV BAR HEADER ----------//
 //---------- SECTION ABOUT ME ------------//
-
 #k-abtme {
     margin-top: 1%;
     background-color: $bgcolor;
-
+    position: relative;
     .k-titlesection {
-        margin-left: -1%;
-        margin-top: 4%;
-        margin-bottom: 3%;
-        padding: 0.5% 3%;
-        font-family: $navfont;
-        font-variant: small-caps;
-        font-weight: bolder;
-        color: #fff;
-        background-color: $actioncolor;
+        @include title-ribbon();
     }
 
-    figure {}
-
-    .k-face {
-        padding: 0;
-        border-radius: 100%;
-        border: 4px solid #fff;
-        opacity: 1;
-        -webkit-transition: 0.3s ease-in-out;
-        transition: 0.3s ease-in-out;
-    }
-
-    .k-face:hover {
-        opacity: 0.8;
-    }
-
-    .k-name {
-            h2 {
-            background-color: $bgcolor;
-            margin-top: 0;
-            font-family: $primaryfont;
-            font-variant: small-caps;
-            font-size: 3em;
-            color: white;
+        .k-name{
+            margin-top:10%;
         }
-
-        h3 {
-            margin-top: 0;
-            font-family: $primaryfont;
-            font-variant: small-caps;
-            font-size: 2em;
-        }
-
-        h2::first-letter,
-        h3::first-letter,
-        span {
-            font-size: 1em;
-            font-weight: 400;
-        }
-
-        .k-social {
-            display: inline-block;
-
-            img {}
-        }
-    }
-
-    .k-descrip {
-        font-family: $primaryfont;
-        color: $fontcolor;
-
-        article {
-            padding: 0;
-
-            h4 {
-                padding-top: 0.5%;
-                font-family: $primaryfont;
+        article{
                 text-transform: uppercase;
+                font-family: 'Montserrat', sans-serif;
+                padding:0;
+                color:white;
+            figure{
+                img{
+                    width: 100%;
+                    height: 100vh;
+                }
+            }
+            h2{
+                font-size:6em;
+            }
+            h3{
+                font-size:5em;
             }
 
-            img {}
+        }
+        .k-counter{
+            position:absolute;
+            top:10em;
+            font-size: 2em;
         }
     }
-}
 //---------- FIN SECTION ABOUT ME --------//
 //---------- SECTION MY WORK -------------//
-
 #k-works {
     margin-top: 4%;
     background-color: #fff;
 
     .k-titlesection {
-        margin-left: -1%;
-        margin-top: 4%;
-        margin-bottom: 3%;
-        padding: 0.5% 3%;
-        font-family: $navfont;
-        font-variant: small-caps;
-        font-weight: bolder;
-        color: #fff;
-        background-color: $actioncolor;
+        @include title-ribbon();
     }
 
     figure {
@@ -356,7 +322,7 @@ nav {
 
         figcaption {
             width: 19%;
-            margin: 0 3%;
+            margin: 0;
 
             img {
                 width: 100%;
@@ -364,91 +330,88 @@ nav {
             }
         }
     }
-}
 
-.k-frame {
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0.3%;
-    -moz-box-shadow: 0 0 5px #333;
-    -webkit-box-shadow: 0 0 5px #333;
-    box-shadow: 0 0 5px #333;
-    background-color: $bgcolor;
-
-    .k-imgwork {
-        position: relative;
-        width: 100%;
+    .k-frame {
+        // width: 100%;
         height: 100%;
-        overflow: hidden;
+        margin: 0 3%;
+        padding: 0.3%;
+        background-color: $bgcolor;
 
-        &:hover .k-details {
-            top: 0;
-            left: 0;
-            transform: rotate(0deg);
-
-            h1 {
-                left: 0;
-                transition-delay: 200ms;
-            }
-
-            a {
-                right: 0;
-                transition-delay: 400ms;
-            }
-
-            p {
-                opacity: 1;
-                -webkit-transition: all 1s ease-in-out;
-                -moz-transition: all 1s ease-in-out;
-                -o-transition: all 1s ease-in-out;
-                transition: all 1s ease-in-out;
-                transition-delay: 500ms;
-            }
-        }
-
-        .k-details {
+        .k-imgwork {
+            position: relative;
             width: 100%;
             height: 100%;
-            position: absolute;
-            top: 0;
-            left: 0;
-            background: rgba(237, 87, 88, 0.8);
-            position: absolute;
-            left: -100%;
-            top: -100%;
-            transition: all 200ms linear;
-            transform: rotate(90deg);
+            overflow: hidden;
 
-            h1 {
-                padding: 0.2em 0.3em;
+            &:hover .k-details {
+                top: 0;
+                left: 0;
+                transform: rotate(0deg);
+
+                h1 {
+                    left: 0;
+                    transition-delay: 200ms;
+                }
+
+                a {
+                    right: 0;
+                    transition-delay: 400ms;
+                }
+
+                p {
+                    opacity: 1;
+                    -webkit-transition: all 1s ease-in-out;
+                    -moz-transition: all 1s ease-in-out;
+                    -o-transition: all 1s ease-in-out;
+                    transition: all 1s ease-in-out;
+                    transition-delay: 500ms;
+                }
+            }
+
+            .k-details {
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
                 background: rgba(237, 87, 88, 0.8);
                 position: absolute;
-                top: 1%;
                 left: -100%;
-                transition: left 200ms linear;
-                color: white;
-                font-size: 1em;
-                font-weight: $navfont;
-            }
+                top: -100%;
+                transition: all 200ms linear;
+                transform: rotate(90deg);
 
-            p {
-                width: 80%;
-                position: absolute;
-                top: 40%;
-                left: 10%;
-                opacity: 0;
-                color: white;
-            }
+                h1 {
+                    padding: 0.2em 0.3em;
+                    background: rgba(237, 87, 88, 0.8);
+                    position: absolute;
+                    top: 1%;
+                    left: -100%;
+                    transition: left 200ms linear;
+                    color: white;
+                    font-size: 1em;
+                    font-weight: $navfont;
+                }
 
-            a {
-                position: absolute;
-                right: 1000%;
-                top: 80%;
-                padding: 0.2em 0.3em;
-                background: rgba(237, 87, 88, 0.8);
-                color: white;
-                text-decoration: none;
+                p {
+                    width: 80%;
+                    position: absolute;
+                    top: 40%;
+                    left: 10%;
+                    opacity: 0;
+                    color: white;
+                }
+
+                a {
+                    position: absolute;
+                    right: 1000%;
+                    top: 80%;
+                    padding: 0.2em 0.3em;
+                    background: rgba(237, 87, 88, 0.8);
+                    color: white;
+                    text-decoration: none;
+                }
             }
         }
     }
@@ -460,15 +423,7 @@ nav {
     background-color: $bgcolor;
 
     .k-titlesection {
-        margin-left: -1%;
-        margin-top: 4%;
-        margin-bottom: 3%;
-        padding: 0.5% 3%;
-        font-family: $navfont;
-        font-variant: small-caps;
-        font-weight: bolder;
-        color: #fff;
-        background-color: $actioncolor;
+        @include title-ribbon();
     }
 
     #k-rousel {
@@ -492,3 +447,10 @@ nav {
     }
 }
 //---------- FIN SECTION SHOWCASE --------//
+//---------- SECTION TECHNICAL SKILLS ----//
+#k-skills{
+    .k-titlesection{
+        @include title-ribbon();
+    }
+
+}
