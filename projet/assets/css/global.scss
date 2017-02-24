@@ -6,7 +6,10 @@ $actioncolor: #ED5758;
 $titlecolor: #4D4D4D;
 $bgcolor: #B7B7B7;
 $fontcolor: #000; //----------  Fin Color
+
+
 @import url( 'https://fonts.googleapis.com/css?family=Montserrat:900'); //font-family: 'Montserrat', sans-serif;
+@import url( 'https://fonts.googleapis.com/css?family=Pacifico');
 @font-face {
     font-family: 'Corbel';
     src: url('../font/Corbel.ttf');
@@ -33,15 +36,21 @@ $fontcolor: #000; //----------  Fin Color
     position: absolute;
     top: 4%;
     left: -1%;
+
     padding: 0.5% 3%;
+
     font-family: $navfont;
     font-variant: small-caps;
     font-weight: bolder;
+
     color: #fff;
     background-color: $actioncolor;
+
     -webkit-box-shadow: 4px 4px 20px 1px rgba(0,0,0,0.75);
     -moz-box-shadow: 4px 4px 20px 1px rgba(0,0,0,0.75);
     box-shadow: 4px 4px 20px 1px rgba(0,0,0,0.75);
+
+    z-index:2;
 }
 
 .KW_progressContainer {
@@ -78,27 +87,28 @@ body {
 
 body:before {
     content: '';
+    position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
-    -webkit-filter: blur(4px);
-    background-image: url('../img/bgheader.jpeg');
+    -webkit-filter: blur(2px);
+    background-image: url('../img/bgheader.jpg');
+    background-size: cover;
     z-index: -9;
 }
 
 body:after {
     content: '';
+    position: absolute;
     left: 0;
     top: 0;
     bottom: 0;
     right: 0;
     width: 100%;
     height: 100%;
-    position: absolute;
 }
 //---------- Fin header background ----------//
 
@@ -110,13 +120,16 @@ body:after {
 #k-works {
     position: relative;
     height: 100vh;
+    max-height: 100vh;
     width: 100%;
+
 }
 //---------- Navbar + Header ----------//
 
 nav {
     background-color: $bgcolor;
     border: none;
+    color:white;
 }
 
 .navbar .navbar-nav {
@@ -145,7 +158,7 @@ nav {
 }
 
 .navbar-brand i {
-    color: $fontcolor;
+    color: whitesmoke;
 }
 
 #k-navbar ul li a {
@@ -153,7 +166,7 @@ nav {
     font-variant: small-caps;
     font-weight: bolder;
     font-size: 1.5em;
-    color: $fontcolor;
+    color: white;
 }
 
 #k-navbar ul li a:active,
@@ -259,7 +272,6 @@ nav {
 }
 //---------- FIN NAV BAR HEADER ----------//
 //---------- SECTION ABOUT ME ------------//
-
 #k-abtme {
     margin-top: 1%;
     background-color: $bgcolor;
@@ -282,16 +294,17 @@ nav {
         figure {
             img {
                 width: 100%;
-                height: 100vh;
+                max-height: 100vh;
+                height:100vh;
             }
         }
 
         h2 {
-            font-size: 6em;
+            font-size: 5em;
         }
 
         h3 {
-            font-size: 5em;
+            font-size: 3em;
         }
     }
 
@@ -303,7 +316,6 @@ nav {
 }
 //---------- FIN SECTION ABOUT ME --------//
 //---------- SECTION MY WORK -------------//
-
 #k-works {
     margin-top: 4%;
     background-color: #fff;
@@ -334,8 +346,6 @@ nav {
         // width: 100%;
         height: 100%;
         margin: 0 3%;
-        padding: 0.3%;
-        background-color: $bgcolor;
 
         .k-imgwork {
             position: relative;
@@ -394,9 +404,10 @@ nav {
                 }
 
                 p {
+                    text-align: left;
                     width: 80%;
                     position: absolute;
-                    top: 40%;
+                    top: 30%;
                     left: 10%;
                     opacity: 0;
                     color: white;
@@ -417,7 +428,6 @@ nav {
 }
 //---------- FIN SECTION MY WORK ---------//
 //---------- SECTION SHOWCASE ------------//
-
 #k-showcase {
     margin-top: 4%;
     background-color: $bgcolor;
@@ -428,11 +438,12 @@ nav {
 
     #k-rousel {
         position: relative;
-        height: 99vh;
+        height: 80vh;
 
         img {
-            margin: auto;
+            margin: 10% auto;
             width: auto;
+            height:50vh;
         }
 
         .carousel-control.left,
@@ -447,7 +458,6 @@ nav {
 }
 //---------- FIN SECTION SHOWCASE --------//
 //---------- SECTION TECHNICAL SKILLS ----//
-
 #k-skills {
     background: #eee;
 
@@ -478,73 +488,355 @@ nav {
             font-family: $titlefont;
             font-variant: small-caps;
             font-size: 2em;
-            color: #fff;
+            font-weight: bolder;
+            color: #999;
             margin-top: 10%;
-            padding: 0.5em 0;
-            border: 2px solid #ddd;
-            background: $bgcolor;
         }
     }
 
-        .modal-content {
-            border-radius:0;
-            .modal-header {
-                font-family: $titlefont;
-                color:#000;
-                font-variant: small-caps;
-                border: none;
-            }
-            .modal-body {
-                font-family: $titlefont;
-            }
-            .modal-footer {
-                border: none;
-                .btn-default{
-                    font-family: $titlefont;
-                    color: #fff;
-                    font-variant: small-caps;
-                    background-color: #ED5758;
-                    border-color: #fff;
-                    }
-                .btn{
-                    display: inline-block;
-                    padding: 6px 12px;
-                    margin-bottom: 0;
-                    font-size: 14px;
-                    font-weight: 400;
-                    line-height: 1.42857143;
-                    text-align: center;
-                    white-space: nowrap;
-                    vertical-align: middle;
-                    -ms-touch-action: manipulation;
-                    touch-action: manipulation;
-                    cursor: pointer;
-                    -webkit-user-select: none;
-                    -moz-user-select: none;
-                    -ms-user-select: none;
-                    user-select: none;
-                    background-image: none;
-                    border: 1px solid transparent;
-                    border-radius: 0px;
-                }
-                .btn.active.focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn:active:focus, .btn:focus{
-                    outline:0px;
-                }
-            }
+    .modal-content {
+        border-radius: 0;
 
+        .modal-header {
+            font-family: $titlefont;
+            color: #000;
+            font-variant: small-caps;
+            border: none;
         }
-}
 
+        .modal-body {
+            font-family: $titlefont;
+        }
+
+        .modal-footer {
+            border: none;
+
+            .btn-default {
+                font-family: $titlefont;
+                color: #fff;
+                font-variant: small-caps;
+                background-color: #ED5758;
+                border-color: #fff;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 6px 12px;
+                margin-bottom: 0;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 1.42857143;
+                text-align: center;
+                white-space: nowrap;
+                vertical-align: middle;
+                -ms-touch-action: manipulation;
+                touch-action: manipulation;
+                cursor: pointer;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+                background-image: none;
+                border: 1px solid transparent;
+                border-radius: 0;
+            }
+
+            .btn.active.focus,
+            .btn.active:focus,
+            .btn.focus,
+            .btn:active.focus,
+            .btn:active:focus,
+            .btn:focus {
+                outline: 0;
+            }
+        }
+    }
+}
 //---------- FIN SECTION TECHNICAL SKILLS -//
 //---------- SECTION CONTACT --------------//
-#k-contact{
-    background-image:url('../img/water.gif');
+#k-contact {
+    background-image:url('../img/backgroundphone.jpeg');
     background-size:cover;
-    .k-titlesection{
-    @include title-ribbon();
-    margin-top:3%;
+
+    .k-titlesection {
+        @include title-ribbon();
+        margin-top: 3%;
     }
-    form{
-        margin-top:10%;
+
+    #k-sayhello {
+        margin-top: 10%;
+
+        border-right: 2px dotted black;
+
+        h3
+        {
+            font-family: "Pacifico";
+            color:white;
         }
+        p
+        {
+            font-family:$titlefont;
+            color:white;
+        }
+        a{
+            img {
+                height:10vh;
+            }
+        }
+    }
+    #k-phone{
+        margin-top: 10%;
+
+
+        .k-phonedetails{
+            margin-left: 3%;
+            h3
+            {
+                font-family: "Pacifico";
+                color:white;
+            }
+            p
+            {
+                font-family:$titlefont;
+                color:white;
+            }
+            a{
+                .logomail{
+                    transform: scale(1.5);
+                    margin-right: 13px;
+                }
+                img {
+                    height:10vh;
+                }
+            }
+        }
+    }
+}
+//---------- FIN SECTION CONTACT ----------//
+//---------- FOOTER -----------------------//
+
+footer{
+    background:$actioncolor;
+    text-align: right;
+
+    h2{
+        font-family: "Pacifico";
+        font-size: 1em;
+        margin-right:3%;
+        color:#fffeff;
+    }
+}
+//---------- FIN FOOTER -------------------//
+@media screen and (max-width: 750px)
+{
+    .scroll-down {
+            position: absolute;
+            left: 46%;
+            top: 75vh;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            z-index: 100;
+            text-decoration: none;
+            text-shadow: 0;
+            width: 35px;
+            height: 35px;
+            border-bottom: 4px solid $actioncolor;
+            border-right: 4px solid $actioncolor;
+            z-index: 9;
+            -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            -moz-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+            -webkit-animation: fade_move_down 2s ease-in-out infinite;
+            -moz-animation: fade_move_down 2s ease-in-out infinite;
+            animation: fade_move_down 2s ease-in-out infinite;
+        }
+    #k-abtme {
+            margin-top: 1%;
+            background-color: $bgcolor;
+            position: relative;
+
+            .k-titlesection {
+                @include title-ribbon();
+            }
+
+            .k-name {
+                margin-top: 30%;
+            }
+            .col-xs-12{
+                padding:0;
+            }
+            article {
+                text-transform: uppercase;
+                font-family: 'Montserrat', sans-serif;
+                padding: 0;
+                color: white;
+
+                figure {
+                    img {
+                        margin-top:7%;
+                        width: 100%;
+                        max-height: none;
+                        height:auto;
+                    }
+                }
+
+                h2 {
+                    font-size: 3em;
+                }
+
+                h3 {
+                    font-size: 1.5em;
+                }
+            }
+    }
+    #k-works {
+        height:auto;
+        max-height: none;
+        margin-top: 4%;
+        background-color: #fff;
+
+        .col-xs-12{
+            padding:0;
+        }
+        .k-titlesection {
+            @include title-ribbon();
+            top:1.7%;
+        }
+
+        .k-mywork {
+            margin-top: 25%;
+
+            figure {
+                float: left;
+
+                figcaption {
+                    width: 100%;
+                    margin: 0.5% 0%;
+                    padding:0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+            .k-frame {
+                width: 100%;
+                height: 100%;
+                margin: 0%;
+                padding:0%;
+            }
+        }
+    #k-showcase {
+        margin-top: 4%;
+        background-color: $bgcolor;
+
+        .k-titlesection {
+            @include title-ribbon();
+
+        }
+
+        #k-rousel {
+            position: relative;
+            height: 80vh;
+
+            img {
+                margin: 33% auto;
+                width: auto;
+                height:50vh;
+            }
+        }
+    }
+    #k-skills {
+            background: #eee;
+            height: auto;
+            max-height: none;
+
+            .k-titlesection {
+                @include title-ribbon();
+                top:0;
+            }
+
+            .k-whatido {
+                display: block;
+                justify-content: none;
+                margin-top: 20%;
+
+                img {
+                    cursor: pointer;
+                    width: 100%;
+                }
+
+                img:active {
+                    padding: 0;
+                    transform: translateY(20px);
+                    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+                    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+                    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+                    border-radius: 100%;
+                }
+
+                .k-ribbon {
+                    font-family: $titlefont;
+                    font-variant: small-caps;
+                    font-size: 2em;
+                    font-weight: bolder;
+                    color: #999;
+                    margin-top: 10%;
+                }
+            }
+        }
+    #k-contact {
+            background-image:url('../img/backgroundphone.jpeg');
+            background-size:cover;
+
+            .k-titlesection {
+                @include title-ribbon();
+                margin-top: 3%;
+            }
+
+            #k-sayhello {
+                margin-top: 17%;
+                border-right: none;
+                padding-bottom: 5%;
+                border-bottom: 2px dotted white;
+
+                h3
+                {
+                    font-family: "Pacifico";
+                    color:white;
+                }
+                p
+                {
+                    font-family:$titlefont;
+                    color:white;
+                }
+                a{
+                    img {
+                        height:10vh;
+                    }
+                }
+            }
+        }
+    footer{
+            background:$actioncolor;
+            text-align: center;
+
+            h2{
+                font-family: "Pacifico";
+                font-size: 1em;
+                margin-right:0%;
+                color:#fffeff;
+            }
+        }
+    .navbar > .container .navbar-brand,.navbar > .container-fluid .navbar-brand {
+            margin: 5px 0;
+        }
+    .navbar-brand i {
+        color: whitesmoke;
+        margin: 0 7px;
+    }
 }

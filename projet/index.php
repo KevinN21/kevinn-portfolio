@@ -37,9 +37,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
             <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.2/jquery.fullPage.min.js"></script> -->
-        <script src="assets/js/global.js"></script>
 
-      <title>Kevin Nguyen | Web Developper</title>
+      <title>Kevin Nguyen ::     Web Developper</title>
     </head>
 <body>
     <header id="k-header" class=" text-center">
@@ -52,7 +51,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><i class="fa fa-home fa-fa4x" area-hidden="true"></i></a>
+                    <a class="navbar-brand" href="#"><i class="fa fa-home fa-lg" area-hidden="true"></i></a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="k-navbar">
@@ -70,7 +69,7 @@
 
             <div class="col-md-12 k-site-title center-block">
                 <h1 class="">
-                    <img class="center-block"  src="assets/img/logo_animated.svg" alt="Logo Kevin Nguyen Portfolio">
+                    <img class="center-block"  src="assets/svg/logo_animated.svg" alt="Logo Kevin Nguyen Portfolio">
                 </h1>
                 <a href="#k-abtme"><div class="scroll-down"></div></a>
             </div>
@@ -79,12 +78,12 @@
     <main class="container-fluid">
             <section id="k-abtme"    class="section row text-center">
                 <h2 class="k-titlesection pull-left">About me</h2>
-                <div class="col-md-12">
-                    <article class="k-name col-md-6 text-center">
+                <div class="col-md-12 col-xs-12">
+                    <article class="k-name col-md-6 col-xs-12 text-center">
                         <h2>Kevin Nguyen</h2>
                         <h3>Developper Web</h3>
 
-                        <div class="k-counter">
+                        <div class="k-counter col-md-12 hidden-sm hidden-xs">
                             <div class="col-md-3">
                                 <p class="count">721</p>
                                 <p>cups of coffee</p>
@@ -101,25 +100,13 @@
                                 <p class="count">84</p>
                                 <p>MC Donald's</p>
                             </div>
-                                <script type="text/javascript">
-                                    $('.count').each(function () {
-                                        $(this).prop('Counter',0).animate({
-                                            Counter: $(this).text()
-                                        }, {
-                                            duration: 5000,
-                                            easing: 'linear',
-                                            step: function (now) {
-                                                $(this).text(Math.ceil(now));
-                                            }
-                                        });
-                                    });
-                                </script>
+                            <!-- <button type="button" name="button">Download</button> -->
                         </div>
                     </article>
-                    <article class="col-md-6">
+                    <article class="col-md-6 col-xs-12">
                         <figure>
                             <figcaption>
-                                <img src="./assets/img/kebab.jpg" alt="">
+                                <img src="./assets/img/Kevin-Nguyen.jpg" alt="Ma tête" class="img-responsive">
                             </figcaption>
                         </figure>
                     </article>
@@ -129,19 +116,89 @@
                 <article class="row">
                     <h2 class="k-titlesection pull-left">My Work</h2>
                         <div class="k-mywork">
+
+<?php
+
+$myProjects = array(
+        array(
+            'image'  =>'assets/img/MU-spaceinvader.jpg',
+            'title'  =>'Space Invader',
+            'descrip' =>'Jeux fait uniquement avec du HTML, CSS et JS.',
+            'periode' =>'07/11/2016 - 10/11/2016',
+            'lien' =>'http://kevinn.student.codeur.online/space-invader/'
+        ),
+        array(
+            'image' =>'assets/img/MU-miniblog.jpg',
+            'title' =>'Mini Blog',
+            'descrip' =>"Création d'article, de catégories et d'auteurs, en utilisant du PHP avec un modèle MVC.",
+            'periode' =>'30/11/2016 - 02/12/2016',
+            'lien' =>'http://kevinn.student.codeur.online/mini-blog/',
+        ),
+        array(
+            'image' =>'assets/img/MU-memegenerator.jpg',
+            'title' =>'Meme Generator',
+            'descrip' =>'Génération et création du meme en utilisant PHP, HTML, CSS.',
+            'periode' =>'14/12/2016 - 20/12/2016',
+            'lien' =>'http://kevinn.student.codeur.online/meme-generator/',
+        ),
+        array(
+            'image' =>'assets/img/MU-filesexplorer.jpg',
+            'title' =>'File Explorer',
+            'descrip' =>'Arborescence et exploration de fichier, utilisation du PHP, AJAX, HTML et CSS.',
+            'periode' =>'16/11/2016 - 22/11/2016',
+            'lien' =>'http://kevinn.student.codeur.online/file-explorateur/',
+        ),
+        array(
+            'image' =>'assets/img/MU-kapybox.jpg',
+            'title' =>'We Transfer',
+            'descrip' =>'Projet de transfert de fichier, en utilisant PHP, HTML, CSS, JQuery.',
+            'periode' =>'02/01/2017 - 10/01/2017',
+            'lien' =>'http://kevinn.student.codeur.online/KYPA/'
+        ),
+        array(
+            'image' =>'assets/img/MU-blog404.jpg',
+            'title' =>'Blog 404',
+            'descrip' =>'Projet de refonte du blog WordPress de notre promo.',
+            'periode' =>'11/01/2017 - 17/01/2017',
+            'lien' =>'http://kevinn.student.codeur.online/BLOG_404/1_siteWEB/404-code-found/'
+        ),
+        array(
+            'image'  => 'assets/img/MU-data.jpg',
+            'title'  => 'Projet DATA',
+            'descrip'  =>'Open DATA des musées de France en prennant le concept de Tinder, en utilisant PHP, HTML, CSS, JQuery.',
+            'periode'  =>'18/01/2017 - 01/02/2017',
+            'lien'  =>'http://kevinn.student.codeur.online/projet_DATA/'
+
+        ),
+        array(
+            'image'  =>'assets/img/MU-accropolis.jpg',
+            'title'  =>'Projet Commenditaire',
+            'descrip'  => "Refonte graphique de 'La chaîne de streaming citoyenne Accropolis' sous WordPress.",
+            'periode'  =>'02/01/2017 - 27/02/2017',
+            'lien'  =>'http://kevinn.public.codeur.online'
+        )
+);
+
+?>
+
                             <?php for($a=0;$a<=1;$a++) : ?>
                                 <div class="row">
-                                    <figure class="col-md-12 col-xs-12">
-                                        <?php for($i = 0; $i <= 3; $i ++) : ?>
-                                            <figcaption class="k-frame col-md-4">
+                                    <figure class="col-md-12">
+                                        <?php for($i = 0+$a*4; $i <= 3+$a*4; $i ++) :
+
+                                        $monProjet =  $myProjects[$i];
+
+                                            ?>
+                                            <figcaption class="k-frame col-md-4 col-xs-12">
                                                 <div class="k-imgwork">
-                                                    <img src="assets/img/kebab.jpg" alt="My Work"/>
+                                                    <img src="<?php echo $monProjet['image'] ?>" alt="My Work"/>
                                                         <div class="k-details">
-                                                            <h3>My Kebab</h3>
-                                                            <p class="col-md-10">Lorem ipsum dolor. Aenean scelerisque odio ut dui feugiat commodo. Nulla blandit erat vel nisi consectetur ac pharetra augue consectetur</p>
-                                                            <a href="#">Find out more</a>
+                                                            <h3><?php echo $monProjet['title'] ?></h3>
+                                                            <p class="col-md-10"><?php echo $monProjet['descrip'] ?></p>
+                                                            <!-- <p class="col-md-10"><?php echo $monProjet['periode'] ?></p> -->
+                                                            <a href="<?php echo $monProjet['lien'] ?>" target='_blank'>Find out more</a>
                                                         </div>
-                                                </div>
+                                            </div>
                                             </figcaption>
                                         <?php endfor; ?>
                                     </figure>
@@ -165,19 +222,19 @@
                                   <!-- Wrapper for slides -->
                                   <div class="carousel-inner center-block" role="listbox">
                                     <div class="item active">
-                                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                                      <img class="d-block img-fluid" src="assets/img/carousel-onepage.JPG" alt="My work" >
                                     </div>
 
                                     <div class="item">
-                                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                                      <img class="d-block img-fluid" src="assets/img/carousel-memories.jpg" alt="My work" >
                                     </div>
 
                                     <div class="item">
-                                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                                      <img class="d-block img-fluid" src="assets/img/carousel-cartevoeux.JPG" alt="My work" >
                                     </div>
 
                                     <div class="item">
-                                      <img class="d-block img-fluid" src="assets/img/kebab.jpg" alt="My work" >
+                                      <img class="d-block img-fluid" src="assets/img/carousel-accropolis.jpg" alt="My work" >
                                     </div>
                                   </div>
 
@@ -191,33 +248,26 @@
                                     <span class="sr-only">Next</span>
                                   </a>
                                 </div>
-                                </article>
-                                <script type="text/javascript">
-                                $('.carousel').carousel()
-                                </script>
+                </article>
             </section>
             <section id="k-skills"   class="section row">
               <div class="row">
                 <h2 class="k-titlesection pull left">Technical Skills</h2>
                     <article class="k-whatido row text-center">
-                            <div class="col-md-3 col-xs-12">
+                            <div class="col-md-4 col-xs-12">
                                 <img data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I do" data-skills="web" src="assets/svg/web.svg" alt="What I do">
                                 <p class="k-ribbon">Web Development</p>
                             </div>
-                            <div class="col-md-3 col-xs-12">
+                            <div class="col-md-4 col-xs-12">
                                 <img  data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I use" data-skills="tools" src="assets/svg/tools.svg" alt="My tools">
                                 <p class="k-ribbon">Softwares</p>
                             </div>
-                            <div class="col-md-3 col-xs-12">
+                            <div class="col-md-4 col-xs-12">
                                 <img  data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I like" data-skills="hobbies" src="assets/svg/hobby.svg" alt="My hobbies">
                                 <p class="k-ribbon">During my free Time</p>
                             </div>
                     </article>
-                        <script type="text/javascript">
-                            $(function () {
-                            $('[data-supp="tooltip"]').tooltip()
-                            })
-                        </script>
+
 
                         <div class="modal fade" id="k-modal" tabindex="-1" role="dialog" aria-labelledby="kModalLabel">
                           <div class="modal-dialog" role="document">
@@ -227,9 +277,11 @@
                                 <h4 class="modal-title" id="kModalLabel"></h4>
                               </div>
                               <div class="modal-body">
-                                  <img id="k-imgs-web" src="" alt="Logo Languages">
-                                  <!-- <img id="k-imgs-tool" src="" alt="Logo Languages">
-                                  <img id="k-imgs-hobby" src="" alt="Logo Languages"> -->
+                                  <img class="k-imgs-web" src="" alt="Logo Languages">
+                                  <img class="k-imgs-web" src="" alt="Logo Languages">
+                                  <img class="k-imgs-web" src="" alt="Logo Languages">
+                                  <!-- <img class="k-imgs-tool" src="" alt="Logo Languages">
+                                  <img class="k-imgs-hobby" src="" alt="Logo Languages"> -->
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -260,9 +312,9 @@
                       var html = '';
                       var tab = skills[button.data('skills')];
                       $(tab).each(function( index ) {
-                          $("#k-imgs-web").attr("src",skills.web.image);
-                        //   $("#k-imgs-tool").attr("src",skills.tools.image);
-                        //   $("#k-imgs-hobby").attr("src",skills.hobbies.image);
+                          $(".k-imgs-web").attr("src",skills.web.image);
+                        //   $(".k-imgs-tool").attr("src",skills.tools.image);
+                        //   $(".k-imgs-hobby").attr("src",skills.hobbies.image);
 
 
                           console.log(skills.web.image);
@@ -282,51 +334,37 @@
                       <h2 class="pull-left k-titlesection">Contact me</h2>
                     </div>
                   </article>
-                    <form class="form-group" action="" method="post" novalidate="">
-                      <div class=" col-md-6">
-                        <label for="name">Lastname*</label>
-                        <input id="inputname" name="name" type="text" class="form-control" id="" placeholder="First name & Last name">
-                      </div>
-                      <div class="col-md-6">
-                          <label for="firstname">Firstname*</label>
-                          <input id="inputfirstname" name="firstname" type="text" class="form-control" id="" placeholder="Email">
-                      </div>
-                      <div class="col-md-12">
-                          <label for="email">Email *</label>
-                          <input id="inputemail" name="email" type="text" class="form-control" id="" placeholder="Email">
-                      </div>
-                      <div class="col-md-12">
-                          <label for="message">Message</label>
-                          <textarea id="inputmsg" name="message" class="form-control" rows="8" cols="80" placeholder="Write your message"></textarea>
-                          <button class="btn btn-default" type="submit" name="button">Send </button>
-                      </div>
-                    </form>
+                <div class="row">
+                    <article id="k-sayhello" class="col-md-6">
+                        <h3>Say Hello !</h3>
+                            <div class="">
+                                <p>Follow me on social media. Have a chat with me, we can go get a drink ! I won't bite.</p>
+                                <p><a href="https://www.facebook.com/Kev21n" target="_blank"><img src="assets/svg/facebook.svg" alt="Logo FB"></a>
+                                <a href="https://twitter.com/sun21k?lang=en" target="_blank"><img src="assets/svg/twitter.svg" alt="Logo Tw"></a>
+                                <a href="https://www.linkedin.com/in/kevin21-nguyen/" target="_blank"><img src="assets/svg/linkedin.svg" alt="Logo LinkN"></a>
+                                <a href="https://github.com/KevinN21" target="_blank"><img src="assets/svg/github.svg" alt="Logo GitHb"></a>
+                            </div>
+
+                    </article>
+                    <article id="k-phone" class="col-md-6">
+                        <div class="k-phonedetails">
+                            <h3>For business inquiries</h3>
+                            <p>You got a project for me? Send me an email or give me a call to get in touch.</p>
+                            <p><a href="mailto:kevin21.nguyen@gmail.com?Subject=Business%20Inquiries"><img class="logomail" src="assets/svg/mail.svg" alt="Logo Mail"></a>
+                            <a href="tel:+33670617785"><img src="assets/svg/phone.svg" alt="Logo Phone"></a></p>
+                        </div>
+                    </article>
+                </div>
             </section>
     </main>
     <footer id="k-foot" class="row">
-          <nav>
-            <ul>
-              <li>Kevin Nguyen © - 2017</li>
-              <li><i class="fa fa-envelope"></i> kevin21.nguyen@gmail.com for business inquieris</li>
-              <li><i class="fa fa-phone"></i> +33 6 70 31 77 85</li>
-            </ul>
-          </nav>
-          <div class="KW_progressContainer">
-		<div class="KW_progressBar">
-            <script type="text/javascript">
-                $(window).load(function(){
-              $(window).scroll(function() {
-                var wintop = $(window).scrollTop(), docheight = $('body').height(), winheight = $(window).height();
-                var totalScroll = (wintop/(docheight-winheight))*100;
-                $(".KW_progressBar").css("width",totalScroll+"%");
-              });
-
-            });
-            </script>
-        </div>
-      </div>
+        <h2>Kevin Nguyen © - 2017</h2>
+          <!-- <div class="KW_progressContainer">
+		<div class="KW_progressBar"></div>
+    </div> -->
     </footer>
 
+    <script src="assets/js/global.js"></script>
 
 </body>
 </html>
