@@ -1,11 +1,14 @@
 // ---------- Font Variable
 $titlefont: 'Corbel';
-$navfont: 'Corbel'; //---------- Fin Font Variable
+$navfont: 'Corbel';
+//---------- Fin Font Variable
 //---------- Color
 $actioncolor: #ED5758;
 $titlecolor: #4D4D4D;
-$bgcolor: #B7B7B7;
-$fontcolor: #000; //----------  Fin Color
+$bgcolor: #e3e3e3;
+$fontcolor: #000;
+$footercolor: #424242;
+//----------  Fin Color
 
 
 @import url( 'https://fonts.googleapis.com/css?family=Montserrat:900'); //font-family: 'Montserrat', sans-serif;
@@ -53,28 +56,7 @@ $fontcolor: #000; //----------  Fin Color
     z-index:2;
 }
 
-.KW_progressContainer {
-    left: 0;
-    width: 100%;
-    height: 0.4em;
-    margin-bottom: 0;
-    position: fixed;
-    bottom: 0;
-    overflow: hidden;
-    background-color: white;
-    content: "";
-}
 
-.KW_progressBar {
-    width: 0;
-    float: left;
-    height: 100%;
-    z-index: 99;
-    max-width: 100%;
-    background-color: $actioncolor;
-    -webkit-transition: width 0.6s ease;
-    transition: width 0.6s ease;
-}
 // ------------ FIN MISC -----------//
 
 body {
@@ -127,29 +109,34 @@ body:after {
 //---------- Navbar + Header ----------//
 
 nav {
-    background-color: $bgcolor;
+    background-color: $footercolor;
     border: none;
     color:white;
+    border-radius:0;
 }
-
+.navbar{
+    border-radius: 0;
+}
 .navbar .navbar-nav {
     display: inline-block;
     float: none;
     vertical-align: top;
-    background-color: $bgcolor;
+    background-color: $footercolor;
+    border-radius:0;
+
 }
 
 .navbar .navbar-collapse {
     text-align: center;
-    background-color: $bgcolor;
+    background-color: $footercolor;
 }
 
 .navbar-header {
-    background-color: $bgcolor;
+    background-color: $footercolor;
 }
 
 .navbar-default .navbar-toggle {
-    border-color: $bgcolor;
+    border-color: $footercolor;
 }
 
 .navbar > .container .navbar-brand,
@@ -161,6 +148,9 @@ nav {
     color: whitesmoke;
 }
 
+#k-navbar{
+    border-radius:0;
+}
 #k-navbar ul li a {
     font-family: $navfont;
     font-variant: small-caps;
@@ -169,8 +159,8 @@ nav {
     color: white;
 }
 
-#k-navbar ul li a:active,
-#k-navbar ul li a:hover,
+#k-navbar ul li:active,
+#k-navbar ul li:hover,
 .navbar-brand:hover {
     background-color: $actioncolor;
 }
@@ -293,7 +283,7 @@ nav {
 
         figure {
             img {
-                width: 100%;
+                width: auto;
                 max-height: 100vh;
                 height:100vh;
             }
@@ -332,6 +322,7 @@ nav {
 
             figcaption {
                 width: 19%;
+                height:30vh;
                 margin: 3%;
 
                 img {
@@ -460,7 +451,7 @@ nav {
 //---------- SECTION TECHNICAL SKILLS ----//
 #k-skills {
     background: #eee;
-
+    padding-bottom: 3%;
     .k-titlesection {
         @include title-ribbon();
     }
@@ -489,8 +480,10 @@ nav {
             font-variant: small-caps;
             font-size: 2em;
             font-weight: bolder;
-            color: #999;
+            color: #000;
             margin-top: 10%;
+            cursor: pointer;
+
         }
     }
 
@@ -566,7 +559,7 @@ nav {
     #k-sayhello {
         margin-top: 10%;
 
-        border-right: 2px dotted black;
+        border-right: 2px dotted white;
 
         h3
         {
@@ -601,10 +594,7 @@ nav {
                 color:white;
             }
             a{
-                .logomail{
-                    transform: scale(1.5);
-                    margin-right: 13px;
-                }
+
                 img {
                     height:10vh;
                 }
@@ -614,9 +604,8 @@ nav {
 }
 //---------- FIN SECTION CONTACT ----------//
 //---------- FOOTER -----------------------//
-
 footer{
-    background:$actioncolor;
+    background:$footercolor;
     text-align: right;
 
     h2{
@@ -627,7 +616,86 @@ footer{
     }
 }
 //---------- FIN FOOTER -------------------//
-@media screen and (max-width: 750px)
+@media (orientation:landscape)
+{
+    #k-abtme {
+        margin-top: 1%;
+        background-color: $bgcolor;
+        position: relative;
+
+
+        .k-titlesection {
+            @include title-ribbon();
+        }
+        .content
+        {
+            margin-top:4%;
+
+            .k-name {
+                margin-top: 10%;
+            }
+
+            article {
+                text-transform: uppercase;
+                font-family: 'Montserrat', sans-serif;
+                padding: 0;
+                color: white;
+
+                figure {
+                    img {
+                        margin-top:17%;
+                        width: 100%;
+                        max-width: none;
+                        max-height: none;
+                        height:auto;
+                    }
+                }
+
+                h2 {
+                    font-size: 4em;
+                }
+
+                h3 {
+                    font-size: 3em;
+                }
+            }
+
+            .k-counter {
+                position: absolute;
+                top: 15em;
+                font-size: 1.5em;
+            }
+
+        }
+    }
+    #k-works{
+        .k-mywork
+        {
+            margin-top:10%;
+
+            figure {
+                float: left;
+
+                figcaption {
+                    width: 19%;
+                    height:20vh;
+                    margin: 3%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                    p{
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+//---------- Media Queries Tablet  -----------//
+@media (min-width: 767px) and (max-width: 992px)
 {
     .scroll-down {
             position: absolute;
@@ -713,6 +781,7 @@ footer{
                 figcaption {
                     width: 100%;
                     margin: 0.5% 0%;
+                    height:40vh;
                     padding:0;
 
                     img {
@@ -784,8 +853,9 @@ footer{
                     font-variant: small-caps;
                     font-size: 2em;
                     font-weight: bolder;
-                    color: #999;
+                    color: #000;
                     margin-top: 10%;
+                    cursor: pointer;
                 }
             }
         }
@@ -799,6 +869,7 @@ footer{
             }
 
             #k-sayhello {
+                text-align: center;
                 margin-top: 17%;
                 border-right: none;
                 padding-bottom: 5%;
@@ -820,9 +891,12 @@ footer{
                     }
                 }
             }
+            #k-phone{
+                text-align: center;
+            }
         }
     footer{
-            background:$actioncolor;
+            background:$footercolor;
             text-align: center;
 
             h2{
@@ -832,11 +906,221 @@ footer{
                 color:#fffeff;
             }
         }
-    .navbar > .container .navbar-brand,.navbar > .container-fluid .navbar-brand {
-            margin: 5px 0;
-        }
-    .navbar-brand i {
-        color: whitesmoke;
-        margin: 0 7px;
+
     }
+//---------- Media Queries Phone  ----------//
+@media screen and (max-width: 767px)
+{
+
+    .scroll-down {
+            position: absolute;
+            left: 46%;
+            top: 75vh;
+            display: block;
+            text-align: center;
+            font-size: 20px;
+            z-index: 100;
+            text-decoration: none;
+            text-shadow: 0;
+            width: 35px;
+            height: 35px;
+            border-bottom: 4px solid $actioncolor;
+            border-right: 4px solid $actioncolor;
+            z-index: 9;
+            -webkit-transform: translate(-50%, 0%) rotate(45deg);
+            -moz-transform: translate(-50%, 0%) rotate(45deg);
+            transform: translate(-50%, 0%) rotate(45deg);
+            -webkit-animation: fade_move_down 2s ease-in-out infinite;
+            -moz-animation: fade_move_down 2s ease-in-out infinite;
+            animation: fade_move_down 2s ease-in-out infinite;
+        }
+    #k-abtme {
+            margin-top: 1%;
+            background-color: $bgcolor;
+            position: relative;
+
+            .k-titlesection {
+                @include title-ribbon();
+            }
+
+            .k-name {
+                margin-top: 30%;
+            }
+            .col-xs-12{
+                padding:0;
+            }
+            article {
+                text-transform: uppercase;
+                font-family: 'Montserrat', sans-serif;
+                padding: 0;
+                color: white;
+
+                figure {
+                    img {
+                        margin-top:7%;
+                        width: 100%;
+                        max-height: none;
+                        height:auto;
+                    }
+                }
+
+                h2 {
+                    font-size: 3em;
+                }
+
+                h3 {
+                    font-size: 1.5em;
+                }
+            }
+    }
+    #k-works {
+        height:auto;
+        max-height: none;
+        margin-top: 4%;
+        background-color: #fff;
+
+        .col-xs-12{
+            padding:0;
+        }
+        .k-titlesection {
+            @include title-ribbon();
+            top:1.7%;
+        }
+
+        .k-mywork {
+            margin-top: 25%;
+
+            figure {
+                float: left;
+
+                figcaption {
+                    width: 100%;
+                    margin: 0.5% 0%;
+                    height:40vh;
+                    padding:0;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+            .k-frame {
+                width: 100%;
+                height: 100%;
+                margin: 0%;
+                padding:0%;
+            }
+        }
+    #k-showcase {
+        margin-top: 4%;
+        background-color: $bgcolor;
+
+        .k-titlesection {
+            @include title-ribbon();
+
+        }
+
+        #k-rousel {
+            position: relative;
+            height: 80vh;
+
+            img {
+                margin: 33% auto;
+                width: auto;
+                height:50vh;
+            }
+        }
+    }
+    #k-skills {
+            background: #eee;
+            height: auto;
+            max-height: none;
+
+            .k-titlesection {
+                @include title-ribbon();
+                top:0;
+            }
+
+            .k-whatido {
+                display: block;
+                justify-content: none;
+                margin-top: 20%;
+
+                img {
+                    cursor: pointer;
+                    width: 100%;
+                }
+
+                img:active {
+                    padding: 0;
+                    transform: translateY(20px);
+                    -webkit-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+                    -moz-box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+                    box-shadow: 10px 10px 5px 0 rgba(0,0,0,0.75);
+                    border-radius: 100%;
+                }
+
+                .k-ribbon {
+                    font-family: $titlefont;
+                    font-variant: small-caps;
+                    font-size: 2em;
+                    font-weight: bolder;
+                    color: #000;
+                    margin-top: 10%;
+                    cursor: pointer;
+
+                }
+            }
+        }
+    #k-contact {
+            background-image:url('../img/backgroundphone.jpeg');
+            background-size:cover;
+            text-align: center;
+            .k-titlesection {
+                @include title-ribbon();
+                margin-top: 3%;
+            }
+
+            #k-sayhello {
+                text-align: center;
+                margin-top: 24%;
+                border-right: none;
+                padding-bottom: 5%;
+                border-bottom: 2px dotted white;
+
+                h3
+                {
+                    font-family: "Pacifico";
+                    color:white;
+                }
+                p
+                {
+                    font-family:$titlefont;
+                    color:white;
+                }
+                a{
+                    img {
+                        height:10vh;
+                    }
+                }
+            }
+            #k-phone{
+                text-align: center;
+            }
+        }
+    footer{
+            background:$footercolor;
+            text-align: center;
+
+            h2{
+                font-family: "Pacifico";
+                font-size: 1em;
+                margin-right:0%;
+                color:#fffeff;
+            }
+        }
+
 }

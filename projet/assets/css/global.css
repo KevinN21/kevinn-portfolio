@@ -15,27 +15,6 @@
 .row {
   margin: 0; }
 
-.KW_progressContainer {
-  left: 0;
-  width: 100%;
-  height: 0.4em;
-  margin-bottom: 0;
-  position: fixed;
-  bottom: 0;
-  overflow: hidden;
-  background-color: white;
-  content: ""; }
-
-.KW_progressBar {
-  width: 0;
-  float: left;
-  height: 100%;
-  z-index: 99;
-  max-width: 100%;
-  background-color: #ED5758;
-  -webkit-transition: width 0.6s ease;
-  transition: width 0.6s ease; }
-
 body {
   width: 100vw;
   height: 100vh;
@@ -79,25 +58,30 @@ body:after {
   width: 100%; }
 
 nav {
-  background-color: #B7B7B7;
+  background-color: #424242;
   border: none;
-  color: white; }
+  color: white;
+  border-radius: 0; }
+
+.navbar {
+  border-radius: 0; }
 
 .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
-  background-color: #B7B7B7; }
+  background-color: #424242;
+  border-radius: 0; }
 
 .navbar .navbar-collapse {
   text-align: center;
-  background-color: #B7B7B7; }
+  background-color: #424242; }
 
 .navbar-header {
-  background-color: #B7B7B7; }
+  background-color: #424242; }
 
 .navbar-default .navbar-toggle {
-  border-color: #B7B7B7; }
+  border-color: #424242; }
 
 .navbar > .container .navbar-brand,
 .navbar > .container-fluid .navbar-brand {
@@ -106,6 +90,9 @@ nav {
 .navbar-brand i {
   color: whitesmoke; }
 
+#k-navbar {
+  border-radius: 0; }
+
 #k-navbar ul li a {
   font-family: "Corbel";
   font-variant: small-caps;
@@ -113,8 +100,8 @@ nav {
   font-size: 1.5em;
   color: white; }
 
-#k-navbar ul li a:active,
-#k-navbar ul li a:hover,
+#k-navbar ul li:active,
+#k-navbar ul li:hover,
 .navbar-brand:hover {
   background-color: #ED5758; }
 
@@ -188,13 +175,13 @@ nav {
   box-shadow: 0 6px 3px -1px rgba(0, 0, 0, 0.45); }
 
 .sticky {
-  background-color: #B7B7B7;
+  background-color: #e3e3e3;
   opacity: 1;
   top: 0; }
 
 #k-abtme {
   margin-top: 1%;
-  background-color: #B7B7B7;
+  background-color: #e3e3e3;
   position: relative; }
   #k-abtme .k-titlesection {
     position: absolute;
@@ -218,7 +205,7 @@ nav {
     padding: 0;
     color: white; }
     #k-abtme article figure img {
-      width: 100%;
+      width: auto;
       max-height: 100vh;
       height: 100vh; }
     #k-abtme article h2 {
@@ -253,6 +240,7 @@ nav {
       float: left; }
       #k-works .k-mywork figure figcaption {
         width: 19%;
+        height: 30vh;
         margin: 3%; }
         #k-works .k-mywork figure figcaption img {
           width: 100%;
@@ -323,7 +311,7 @@ nav {
 
 #k-showcase {
   margin-top: 4%;
-  background-color: #B7B7B7; }
+  background-color: #e3e3e3; }
   #k-showcase .k-titlesection {
     position: absolute;
     top: 4%;
@@ -352,7 +340,8 @@ nav {
       background-color: #ED5758; }
 
 #k-skills {
-  background: #eee; }
+  background: #eee;
+  padding-bottom: 3%; }
   #k-skills .k-titlesection {
     position: absolute;
     top: 4%;
@@ -386,8 +375,9 @@ nav {
       font-variant: small-caps;
       font-size: 2em;
       font-weight: bolder;
-      color: #999;
-      margin-top: 10%; }
+      color: #000;
+      margin-top: 10%;
+      cursor: pointer; }
   #k-skills .modal-content {
     border-radius: 0; }
     #k-skills .modal-content .modal-header {
@@ -453,7 +443,7 @@ nav {
     margin-top: 3%; }
   #k-contact #k-sayhello {
     margin-top: 10%;
-    border-right: 2px dotted black; }
+    border-right: 2px dotted white; }
     #k-contact #k-sayhello h3 {
       font-family: "Pacifico";
       color: white; }
@@ -472,14 +462,11 @@ nav {
       #k-contact #k-phone .k-phonedetails p {
         font-family: "Corbel";
         color: white; }
-      #k-contact #k-phone .k-phonedetails a .logomail {
-        transform: scale(1.5);
-        margin-right: 13px; }
       #k-contact #k-phone .k-phonedetails a img {
         height: 10vh; }
 
 footer {
-  background: #ED5758;
+  background: #424242;
   text-align: right; }
   footer h2 {
     font-family: "Pacifico";
@@ -487,7 +474,63 @@ footer {
     margin-right: 3%;
     color: #fffeff; }
 
-@media screen and (max-width: 750px) {
+@media (orientation: landscape) {
+  #k-abtme {
+    margin-top: 1%;
+    background-color: #e3e3e3;
+    position: relative; }
+    #k-abtme .k-titlesection {
+      position: absolute;
+      top: 4%;
+      left: -1%;
+      padding: 0.5% 3%;
+      font-family: "Corbel";
+      font-variant: small-caps;
+      font-weight: bolder;
+      color: #fff;
+      background-color: #ED5758;
+      -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      z-index: 2; }
+    #k-abtme .content {
+      margin-top: 4%; }
+      #k-abtme .content .k-name {
+        margin-top: 10%; }
+      #k-abtme .content article {
+        text-transform: uppercase;
+        font-family: 'Montserrat', sans-serif;
+        padding: 0;
+        color: white; }
+        #k-abtme .content article figure img {
+          margin-top: 17%;
+          width: 100%;
+          max-width: none;
+          max-height: none;
+          height: auto; }
+        #k-abtme .content article h2 {
+          font-size: 4em; }
+        #k-abtme .content article h3 {
+          font-size: 3em; }
+      #k-abtme .content .k-counter {
+        position: absolute;
+        top: 15em;
+        font-size: 1.5em; }
+
+  #k-works .k-mywork {
+    margin-top: 10%; }
+    #k-works .k-mywork figure {
+      float: left; }
+      #k-works .k-mywork figure figcaption {
+        width: 19%;
+        height: 20vh;
+        margin: 3%; }
+        #k-works .k-mywork figure figcaption img {
+          width: 100%;
+          height: 100%; }
+        #k-works .k-mywork figure figcaption p {
+          font-size: 10px; } }
+@media (min-width: 767px) and (max-width: 992px) {
   .scroll-down {
     position: absolute;
     left: 46%;
@@ -512,7 +555,7 @@ footer {
 
   #k-abtme {
     margin-top: 1%;
-    background-color: #B7B7B7;
+    background-color: #e3e3e3;
     position: relative; }
     #k-abtme .k-titlesection {
       position: absolute;
@@ -576,6 +619,7 @@ footer {
         #k-works .k-mywork figure figcaption {
           width: 100%;
           margin: 0.5% 0%;
+          height: 40vh;
           padding: 0; }
           #k-works .k-mywork figure figcaption img {
             width: 100%;
@@ -588,7 +632,7 @@ footer {
 
   #k-showcase {
     margin-top: 4%;
-    background-color: #B7B7B7; }
+    background-color: #e3e3e3; }
     #k-showcase .k-titlesection {
       position: absolute;
       top: 4%;
@@ -649,8 +693,9 @@ footer {
         font-variant: small-caps;
         font-size: 2em;
         font-weight: bolder;
-        color: #999;
-        margin-top: 10%; }
+        color: #000;
+        margin-top: 10%;
+        cursor: pointer; }
 
   #k-contact {
     background-image: url("../img/backgroundphone.jpeg");
@@ -671,6 +716,7 @@ footer {
       z-index: 2;
       margin-top: 3%; }
     #k-contact #k-sayhello {
+      text-align: center;
       margin-top: 17%;
       border-right: none;
       padding-bottom: 5%;
@@ -683,21 +729,227 @@ footer {
         color: white; }
       #k-contact #k-sayhello a img {
         height: 10vh; }
+    #k-contact #k-phone {
+      text-align: center; }
 
   footer {
-    background: #ED5758;
+    background: #424242;
     text-align: center; }
     footer h2 {
       font-family: "Pacifico";
       font-size: 1em;
       margin-right: 0%;
-      color: #fffeff; }
+      color: #fffeff; } }
+@media screen and (max-width: 767px) {
+  .scroll-down {
+    position: absolute;
+    left: 46%;
+    top: 75vh;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 35px;
+    height: 35px;
+    border-bottom: 4px solid #ED5758;
+    border-right: 4px solid #ED5758;
+    z-index: 9;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+    -webkit-animation: fade_move_down 2s ease-in-out infinite;
+    -moz-animation: fade_move_down 2s ease-in-out infinite;
+    animation: fade_move_down 2s ease-in-out infinite; }
 
-  .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-    margin: 5px 0; }
+  #k-abtme {
+    margin-top: 1%;
+    background-color: #e3e3e3;
+    position: relative; }
+    #k-abtme .k-titlesection {
+      position: absolute;
+      top: 4%;
+      left: -1%;
+      padding: 0.5% 3%;
+      font-family: "Corbel";
+      font-variant: small-caps;
+      font-weight: bolder;
+      color: #fff;
+      background-color: #ED5758;
+      -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      z-index: 2; }
+    #k-abtme .k-name {
+      margin-top: 30%; }
+    #k-abtme .col-xs-12 {
+      padding: 0; }
+    #k-abtme article {
+      text-transform: uppercase;
+      font-family: 'Montserrat', sans-serif;
+      padding: 0;
+      color: white; }
+      #k-abtme article figure img {
+        margin-top: 7%;
+        width: 100%;
+        max-height: none;
+        height: auto; }
+      #k-abtme article h2 {
+        font-size: 3em; }
+      #k-abtme article h3 {
+        font-size: 1.5em; }
 
-  .navbar-brand i {
-    color: whitesmoke;
-    margin: 0 7px; } }
+  #k-works {
+    height: auto;
+    max-height: none;
+    margin-top: 4%;
+    background-color: #fff; }
+    #k-works .col-xs-12 {
+      padding: 0; }
+    #k-works .k-titlesection {
+      position: absolute;
+      top: 4%;
+      left: -1%;
+      padding: 0.5% 3%;
+      font-family: "Corbel";
+      font-variant: small-caps;
+      font-weight: bolder;
+      color: #fff;
+      background-color: #ED5758;
+      -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      z-index: 2;
+      top: 1.7%; }
+    #k-works .k-mywork {
+      margin-top: 25%; }
+      #k-works .k-mywork figure {
+        float: left; }
+        #k-works .k-mywork figure figcaption {
+          width: 100%;
+          margin: 0.5% 0%;
+          height: 40vh;
+          padding: 0; }
+          #k-works .k-mywork figure figcaption img {
+            width: 100%;
+            height: 100%; }
+    #k-works .k-frame {
+      width: 100%;
+      height: 100%;
+      margin: 0%;
+      padding: 0%; }
+
+  #k-showcase {
+    margin-top: 4%;
+    background-color: #e3e3e3; }
+    #k-showcase .k-titlesection {
+      position: absolute;
+      top: 4%;
+      left: -1%;
+      padding: 0.5% 3%;
+      font-family: "Corbel";
+      font-variant: small-caps;
+      font-weight: bolder;
+      color: #fff;
+      background-color: #ED5758;
+      -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      z-index: 2; }
+    #k-showcase #k-rousel {
+      position: relative;
+      height: 80vh; }
+      #k-showcase #k-rousel img {
+        margin: 33% auto;
+        width: auto;
+        height: 50vh; }
+
+  #k-skills {
+    background: #eee;
+    height: auto;
+    max-height: none; }
+    #k-skills .k-titlesection {
+      position: absolute;
+      top: 4%;
+      left: -1%;
+      padding: 0.5% 3%;
+      font-family: "Corbel";
+      font-variant: small-caps;
+      font-weight: bolder;
+      color: #fff;
+      background-color: #ED5758;
+      -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      z-index: 2;
+      top: 0; }
+    #k-skills .k-whatido {
+      display: block;
+      justify-content: none;
+      margin-top: 20%; }
+      #k-skills .k-whatido img {
+        cursor: pointer;
+        width: 100%; }
+      #k-skills .k-whatido img:active {
+        padding: 0;
+        transform: translateY(20px);
+        -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
+        border-radius: 100%; }
+      #k-skills .k-whatido .k-ribbon {
+        font-family: "Corbel";
+        font-variant: small-caps;
+        font-size: 2em;
+        font-weight: bolder;
+        color: #000;
+        margin-top: 10%;
+        cursor: pointer; }
+
+  #k-contact {
+    background-image: url("../img/backgroundphone.jpeg");
+    background-size: cover;
+    text-align: center; }
+    #k-contact .k-titlesection {
+      position: absolute;
+      top: 4%;
+      left: -1%;
+      padding: 0.5% 3%;
+      font-family: "Corbel";
+      font-variant: small-caps;
+      font-weight: bolder;
+      color: #fff;
+      background-color: #ED5758;
+      -webkit-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      box-shadow: 4px 4px 20px 1px rgba(0, 0, 0, 0.75);
+      z-index: 2;
+      margin-top: 3%; }
+    #k-contact #k-sayhello {
+      text-align: center;
+      margin-top: 24%;
+      border-right: none;
+      padding-bottom: 5%;
+      border-bottom: 2px dotted white; }
+      #k-contact #k-sayhello h3 {
+        font-family: "Pacifico";
+        color: white; }
+      #k-contact #k-sayhello p {
+        font-family: "Corbel";
+        color: white; }
+      #k-contact #k-sayhello a img {
+        height: 10vh; }
+    #k-contact #k-phone {
+      text-align: center; }
+
+  footer {
+    background: #424242;
+    text-align: center; }
+    footer h2 {
+      font-family: "Pacifico";
+      font-size: 1em;
+      margin-right: 0%;
+      color: #fffeff; } }
 
 /*# sourceMappingURL=global.css.map */

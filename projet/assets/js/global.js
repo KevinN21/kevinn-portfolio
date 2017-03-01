@@ -50,5 +50,24 @@ $(function() {
     $('[data-supp="tooltip"]').tooltip({'delay': { show: 5000, hide: 3000 }
     });
 });
-
+// Carousel
 $('.carousel').carousel()
+// /*----------------------------------------------------*/
+// /* Smooth Scroll
+// /*------------------------------------------------------ */
+jQuery(document).ready(function($) {
+
+   $('.smoothscroll').on('click',function (e) {
+	    e.preventDefault();
+
+	    var target = this.hash,
+	    $target = $(target);
+
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 800, 'swing', function () {
+	        window.location.hash = target;
+	    });
+	});
+
+});
