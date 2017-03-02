@@ -22,10 +22,6 @@
         <meta name="twitter:image:src"         content="">
         <meta name="twitter:image"             content="">
 
-        <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-        <link rel="text/html" href="assets/vendor/bootstrap/fonts">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" >
-        <link rel="stylesheet" href="assets/css/global.css">
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -36,6 +32,8 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="assets/vendor/bootstrap/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="assets/css/global.css">
 
       <title>Kevin Nguyen :: Web Developper</title>
     </head>
@@ -50,7 +48,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand smoothscroll" href="#k-header"><i class="fa fa-home fa-lg" area-hidden="true"></i></a>
+                    <a class="navbar-brand smoothscroll" href="#k-header">Top</a>
                 </div>
 
                 <div class="collapse navbar-collapse" id="k-navbar">
@@ -82,29 +80,35 @@
                         <h3>Developper Web</h3>
 
                         <div class="k-counter col-md-12 hidden-sm hidden-xs">
-                            <div class="col-md-3">
-                                <p class="count">721</p>
-                                <p>cups of coffee</p>
+                            <div class="col-md-3 countDiv">
+                                <img src="assets/svg/coffee.svg" alt="cup of coffee">
+                                <p class="count" data-count="845">0</p>
+                                <p class="countcontent">Cups of Coffee</p>
                             </div>
-                            <div class="col-md-3">
-                                <p class="count">1639270</p>
-                                <p>lines</p>
+                            <div class="col-md-3 countDiv ">
+                                <img src="assets/svg/code.svg" alt="line of code">
+                                <p class="count" data-count="2345146">0</p>
+                                <p class="countcontent">Lines of Code</p>
                             </div>
-                            <div class="col-md-3">
-                                <p class="count">13</p>
-                                <p>projects</p>
+                            <div class="col-md-3 countDiv">
+                                <img src="assets/svg/projets.svg" alt="projects">
+                                <p class="count" data-count="14">0</p>
+                                <p class="countcontent">Projects</p>
                             </div>
-                            <div class="col-md-3">
-                                <p class="count">84</p>
-                                <p>MC Donald's</p>
+                            <div class="col-md-3 countDiv">
+                                <img src="assets/svg/burger.svg" alt="cup of coffee">
+                                <p class="count" data-count="112">0</p>
+                                <p class="countcontent">Mc Donald's</p>
                             </div>
-                            <!-- <button type="button" name="button">Download</button> -->
+                            <div class="col-md-12 text-right">
+                                <button id="hitme" type="button" name="button"> Hit me </button>
+                            </div>
                         </div>
                     </article>
                     <article class="col-md-6 col-sm-12 col-xs-12">
                         <figure>
                             <figcaption>
-                                <img src="./assets/img/Kevin-Nguyen.JPG" alt="Ma tête" class="img-responsive">
+                                <!-- <img src="./assets/img/Kevin-Nguyen.JPG" alt="Ma tête" class="img-responsive"> -->
                             </figcaption>
                         </figure>
                     </article>
@@ -115,69 +119,69 @@
                     <h2 class="k-titlesection pull-left">My Work</h2>
                         <div class="k-mywork">
 
-<?php
+                        <?php
 
-    $myProjects = array(
-        array(
-            'image'  =>'assets/img/MU-spaceinvader.jpg',
-            'title'  =>'Space Invader',
-            'descrip' =>'Jeux fait uniquement avec du HTML, CSS et JS.',
-            'periode' =>'07/11/2016 - 10/11/2016',
-            'lien' =>'http://kevinn.student.codeur.online/space-invader/'
-        ),
-        array(
-            'image' =>'assets/img/MU-miniblog.jpg',
-            'title' =>'Mini Blog',
-            'descrip' =>"Création d'article, de catégories et d'auteurs.",
-            'periode' =>'30/11/2016 - 02/12/2016',
-            'lien' =>'http://kevinn.student.codeur.online/mini-blog/',
-        ),
-        array(
-            'image' =>'assets/img/MU-memegenerator.jpg',
-            'title' =>'Meme Generator',
-            'descrip' =>'Génération et création du Meme.',
-            'periode' =>'14/12/2016 - 20/12/2016',
-            'lien' =>'http://kevinn.student.codeur.online/meme-generator/',
-        ),
-        array(
-            'image' =>'assets/img/MU-filesexplorer.jpg',
-            'title' =>'File Explorer',
-            'descrip' =>'Arborescence et navigation de fichiers.',
-            'periode' =>'16/11/2016 - 22/11/2016',
-            'lien' =>'http://kevinn.student.codeur.online/file-explorateur/',
-        ),
-        array(
-            'image' =>'assets/img/MU-kapybox.jpg',
-            'title' =>'We Transfer',
-            'descrip' =>'Projet de transfert de fichier.',
-            'periode' =>'02/01/2017 - 10/01/2017',
-            'lien' =>'http://kevinn.student.codeur.online/KYPA/'
-        ),
-        array(
-            'image' =>'assets/img/MU-blog404.jpg',
-            'title' =>'Blog 404',
-            'descrip' =>'Refonte du blog WordPress.',
-            'periode' =>'11/01/2017 - 17/01/2017',
-            'lien' =>'http://kevinn.student.codeur.online/BLOG_404/1_siteWEB/404-code-found/'
-        ),
-        array(
-            'image'  => 'assets/img/MU-data.jpg',
-            'title'  => 'Projet DATA',
-            'descrip'  =>'Open DATA des musées de France en prennant le concept de Tinder.',
-            'periode'  =>'18/01/2017 - 01/02/2017',
-            'lien'  =>'http://kevinn.student.codeur.online/projet_DATA/'
+                            $myProjects = array(
+                                array(
+                                    'image'  =>'assets/img/MU-spaceinvader.jpg',
+                                    'title'  =>'Space Invader',
+                                    'descrip' =>'Jeux fait uniquement avec du HTML, CSS et JS.',
+                                    'periode' =>'07/11/2016 - 10/11/2016',
+                                    'lien' =>'http://kevinn.student.codeur.online/space-invader/'
+                                ),
+                                array(
+                                    'image' =>'assets/img/MU-miniblog.jpg',
+                                    'title' =>'Mini Blog',
+                                    'descrip' =>"Création d'article, de catégories et d'auteurs.",
+                                    'periode' =>'30/11/2016 - 02/12/2016',
+                                    'lien' =>'http://kevinn.student.codeur.online/mini-blog/',
+                                ),
+                                array(
+                                    'image' =>'assets/img/MU-memegenerator.jpg',
+                                    'title' =>'Meme Generator',
+                                    'descrip' =>'Génération et création du Meme.',
+                                    'periode' =>'14/12/2016 - 20/12/2016',
+                                    'lien' =>'http://kevinn.student.codeur.online/meme-generator/',
+                                ),
+                                array(
+                                    'image' =>'assets/img/MU-filesexplorer.jpg',
+                                    'title' =>'File Explorer',
+                                    'descrip' =>'Arborescence et navigation de fichiers.',
+                                    'periode' =>'16/11/2016 - 22/11/2016',
+                                    'lien' =>'http://kevinn.student.codeur.online/file-explorateur/',
+                                ),
+                                array(
+                                    'image' =>'assets/img/MU-kapybox.jpg',
+                                    'title' =>'We Transfer',
+                                    'descrip' =>'Projet de transfert de fichier.',
+                                    'periode' =>'02/01/2017 - 10/01/2017',
+                                    'lien' =>'http://kevinn.student.codeur.online/KYPA/'
+                                ),
+                                array(
+                                    'image' =>'assets/img/MU-blog404.jpg',
+                                    'title' =>'Blog 404',
+                                    'descrip' =>'Refonte du blog WordPress.',
+                                    'periode' =>'11/01/2017 - 17/01/2017',
+                                    'lien' =>'http://kevinn.student.codeur.online/BLOG_404/1_siteWEB/404-code-found/'
+                                ),
+                                array(
+                                    'image'  => 'assets/img/MU-data.jpg',
+                                    'title'  => 'Projet DATA',
+                                    'descrip'  =>'Open DATA des musées de France en prennant le concept de Tinder.',
+                                    'periode'  =>'18/01/2017 - 01/02/2017',
+                                    'lien'  =>'http://kevinn.student.codeur.online/projet_DATA/'
 
-        ),
-        array(
-            'image'  =>'assets/img/MU-accropolis.jpg',
-            'title'  =>'Projet Commenditaire',
-            'descrip'  => "Refonte de 'Accropolis' sous WordPress.",
-            'periode'  =>'02/01/2017 - 27/02/2017',
-            'lien'  =>'http://kevinn.public.codeur.online'
-        )
-);
+                                ),
+                                array(
+                                    'image'  =>'assets/img/MU-accropolis.jpg',
+                                    'title'  =>'Projet Commenditaire',
+                                    'descrip'  => "Refonte de 'Accropolis' sous WordPress.",
+                                    'periode'  =>'02/01/2017 - 27/02/2017',
+                                    'lien'  =>'http://kevinn.public.codeur.online'
+                                )
+                        );
 
-?>
+                        ?>
 
                             <?php for($a=0;$a<=1;$a++) : ?>
                                 <div class="row">
@@ -208,121 +212,153 @@
             <section id="k-showcase" class="row">
                 <article class="row">
                       <h2 class="k-titlesection pull-left">My Showcase</h2>
-                             <div id="k-rousel" class="carousel slide" data-ride="carousel">
-                                  <!-- Indicators -->
-                                  <ol class="carousel-indicators">
-                                    <li data-target="#k-rousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#k-rousel" data-slide-to="1"></li>
-                                    <li data-target="#k-rousel" data-slide-to="2"></li>
-                                    <li data-target="#k-rousel" data-slide-to="3"></li>
-                                  </ol>
+                    <div class="hidden-xs hidden-sm">
 
-                                  <!-- Wrapper for slides -->
-                                  <div class="carousel-inner center-block" role="listbox">
-                                    <div class="item active">
-                                      <img class="d-block img-fluid" src="assets/img/carousel-onepage.JPG" alt="My work" >
-                                    </div>
+                          <div class="row">
+                           <div class="col-md-3 img-cropp">
+                             <img src="assets/img/carousel-memories.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width:100%">
+                           </div>
+                           <div class="col-md-3 img-cropp">
+                             <img src="assets/img/carousel-accropolis.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow" style="width:100%">
+                           </div>
+                           <div class="col-md-3 img-cropp">
+                             <img src="assets/img/carousel-cartevoeux.JPG" onclick="openModal();currentSlide(3)" class="hover-shadow" style="width:100%">
+                           </div>
+                           <div class="col-md-3 img-cropp">
+                             <img src="assets/img/carousel-onepage.JPG" onclick="openModal();currentSlide(4)" class="hover-shadow" style="width:100%">
+                           </div>
+                         </div>
 
-                                    <div class="item">
-                                      <img class="d-block img-fluid" src="assets/img/carousel-memories.jpg" alt="My work" >
-                                    </div>
+                         <div id="myModal" class="modal">
+                           <span class="close cursor" onclick="closeModal()">&times;</span>
+                           <div class="modal-content">
 
-                                    <div class="item">
-                                      <img class="d-block img-fluid" src="assets/img/carousel-cartevoeux.JPG" alt="My work" >
-                                    </div>
+                             <div class="mySlides">
+                               <div class="numbertext">1 / 4</div>
+                                 <img src="assets/img/carousel-memories.jpg" style="width:100%">
+                             </div>
 
-                                    <div class="item">
-                                      <img class="d-block img-fluid" src="assets/img/carousel-accropolis.jpg" alt="My work" >
-                                    </div>
-                                  </div>
+                             <div class="mySlides">
+                               <div class="numbertext">2 / 4</div>
+                                 <img src="assets/img/carousel-accropolis.jpg" style="width:100%">
+                             </div>
 
-                                  <!-- Left and right controls -->
-                                  <a class="left carousel-control" href="#k-rousel" role="button" data-slide="prev">
-                                    <span class="glyphicon glyphicon-chevron-left" style="color:#ED5758;" aria-hidden="true"></span>
-                                    <span class="sr-only">Previous</span>
-                                  </a>
-                                  <a class="right carousel-control" href="#k-rousel" role="button" data-slide="next">
-                                    <span class="glyphicon glyphicon-chevron-right" style="color:#ED5758;" aria-hidden="true"></span>
-                                    <span class="sr-only">Next</span>
-                                  </a>
-                                </div>
+                             <div class="mySlides">
+                               <div class="numbertext">3 / 4</div>
+                                 <img src="assets/img/carousel-cartevoeux.JPG" style="width:100%">
+                             </div>
+
+                             <div class="mySlides">
+                               <div class="numbertext">4 / 4</div>
+                                 <img src="assets/img/carousel-onepage.JPG" style="width:100%">
+                             </div>
+
+                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                             <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                             <div class="caption-container">
+                               <p id="caption"></p>
+                             </div>
+
+                             <div class="col-md-3 img-cropp">
+                               <img class="demo" src="assets/img/carousel-memories.jpg" onclick="currentSlide(1)" alt="Maquette Blog WordPress">
+                             </div>
+
+                             <div class="col-md-3 img-cropp">
+                               <img class="demo" src="assets/img/carousel-accropolis.jpg" onclick="currentSlide(2)" alt="Maquette Site Accropolis">
+                             </div>
+
+                             <div class="col-md-3 img-cropp">
+                                 <img class="demo" src="assets/img/carousel-cartevoeux.JPG" onclick="currentSlide(3)" alt="Carte Voeux SVG Animé">
+                             </div>
+
+                             <div class="col-md-3 img-cropp">
+                               <img class="demo" src="assets/img/carousel-onepage.JPG" onclick="currentSlide(4)" alt="Mock up One Page">
+                             </div>
+                           </div>
+                         </div>
+                    </div>
+                    <div id="k-rousel" class="hidden-md hidden-lg carousel slide" data-ride="carousel">
+                         <!-- Indicators -->
+                         <ol class="carousel-indicators">
+                           <li data-target="#k-rousel" data-slide-to="0" class="active"></li>
+                           <li data-target="#k-rousel" data-slide-to="1"></li>
+                           <li data-target="#k-rousel" data-slide-to="2"></li>
+                           <li data-target="#k-rousel" data-slide-to="3"></li>
+                         </ol>
+
+                         <!-- Wrapper for slides -->
+                         <div class="carousel-inner center-block" role="listbox">
+                           <div class="item active">
+                             <img class="d-block img-fluid" src="assets/img/carousel-onepage.JPG" alt="My work" >
+                           </div>
+
+                           <div class="item">
+                             <img class="d-block img-fluid" src="assets/img/carousel-memories.jpg" alt="My work" >
+                           </div>
+
+                           <div class="item">
+                             <img class="d-block img-fluid" src="assets/img/carousel-cartevoeux.JPG" alt="My work" >
+                           </div>
+
+                           <div class="item">
+                             <img class="d-block img-fluid" src="assets/img/carousel-accropolis.jpg" alt="My work" >
+                           </div>
+                         </div>
+
+                         <!-- Left and right controls -->
+                         <a class="left carousel-control" href="#k-rousel" role="button" data-slide="prev">
+                           <span class="glyphicon glyphicon-chevron-left" style="color:#ED5758;" aria-hidden="true"></span>
+                           <span class="sr-only">Previous</span>
+                         </a>
+                         <a class="right carousel-control" href="#k-rousel" role="button" data-slide="next">
+                           <span class="glyphicon glyphicon-chevron-right" style="color:#ED5758;" aria-hidden="true"></span>
+                           <span class="sr-only">Next</span>
+                         </a>
+                       </div>
                 </article>
+                <script>
+                    function openModal() {
+                      document.getElementById('myModal').style.display = "block";
+                    }
+
+                    function closeModal() {
+                      document.getElementById('myModal').style.display = "none";
+                    }
+
+                    var slideIndex = 1;
+                    showSlides(slideIndex);
+
+                    function plusSlides(n) {
+                      showSlides(slideIndex += n);
+                    }
+
+                    function currentSlide(n) {
+                      showSlides(slideIndex = n);
+                    }
+
+                    function showSlides(n) {
+                      var i;
+                      var slides = document.getElementsByClassName("mySlides");
+                      var dots = document.getElementsByClassName("demo");
+                      var captionText = document.getElementById("caption");
+                      if (n > slides.length) {slideIndex = 1}
+                      if (n < 1) {slideIndex = slides.length}
+                      for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                      }
+                      for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                      }
+                      slides[slideIndex-1].style.display = "block";
+                      dots[slideIndex-1].className += " active";
+                      captionText.innerHTML = dots[slideIndex-1].alt;
+                    }
+                </script>
             </section>
             <section id="k-skills"   class="row">
               <div class="row">
                 <h2 class="k-titlesection pull left">Technical Skills</h2>
-                    <article class="k-whatido row text-center">
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <img data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I do" data-skills="web" src="assets/svg/web.svg" alt="What I do">
-                                <p class="k-ribbon"  data-toggle="modal" data-target="#k-modal" data-title="What I do" data-skills="web" >Web Development</p>
-                            </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <img  data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I use" data-skills="tools" src="assets/svg/tools.svg" alt="My tools">
-                                <p class="k-ribbon"  data-toggle="modal" data-target="#k-modal" data-title="What I use" data-skills="tools">Softwares</p>
-                            </div>
-                            <div class="col-md-4 col-sm-12 col-xs-12">
-                                <img  data-supp="tooltip" data-placement="top" title="Click on me !" data-toggle="modal" data-target="#k-modal" data-title="What I like" data-skills="hobbies" src="assets/svg/hobby.svg" alt="My hobbies">
-                                <p class="k-ribbon" data-toggle="modal" data-target="#k-modal" data-title="What I like" data-skills="hobbies">During my free Time</p>
-                            </div>
-                    </article>
-
-
-                        <div class="modal fade" id="k-modal" tabindex="-1" role="dialog" aria-labelledby="kModalLabel">
-                          <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                              <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title" id="kModalLabel"></h4>
-                              </div>
-                              <div class="modal-body">
-                                  <img class="k-imgs-web" src="" alt="Logo Languages">
-                                  <img class="k-imgs-web" src="" alt="Logo Languages">
-                                  <img class="k-imgs-web" src="" alt="Logo Languages">
-                                  <!-- <img class="k-imgs-tool" src="" alt="Logo Languages">
-                                  <img class="k-imgs-hobby" src="" alt="Logo Languages"> -->
-                              </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-
-                 <script type="text/javascript">
-                 skills = {
-                     web:
-                        {
-                            image:'assets/svg/html.svg'
-                        },
-                    tools:
-                        {
-                            image:'assets/svg/ai.svg',
-                        },
-                    hobbies:
-                        {
-                            image:'asset/svg/psd.svg',
-                        }
-                };
-                    $('#k-modal').on('show.bs.modal', function (event) {
-                      var button = $(event.relatedTarget) // Button that triggered the modal
-                      var modal = $(this);
-                      var html = '';
-                      var tab = skills[button.data('skills')];
-                      $(tab).each(function( index ) {
-                          $(".k-imgs-web").attr("src",skills.web.image);
-                        //   $(".k-imgs-tool").attr("src",skills.tools.image);
-                        //   $(".k-imgs-hobby").attr("src",skills.hobbies.image);
-
-
-                          console.log(skills.web.image);
-                          html += this.image ;
-                      });
-                         modal.find('.modal-title').text(button.data('title'))
-                    //   modal.find('.modal-body').text(html);
-                    })
-
-                </script>
               </div>
             </section>
             <section id="k-contact"  class="row text-center">

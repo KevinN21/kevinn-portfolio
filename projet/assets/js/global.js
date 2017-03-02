@@ -3,51 +3,55 @@
 /*------------------------------------------------------ */
 $(window).scroll(function() {
 
-    if ($(window).scrollTop() > 400) {
+    if ($(window).scrollTop() > 500) {
         $('.k-navbar').addClass('sticky');
     } else {
         $('.k-navbar').removeClass('sticky');
     }
 });
-/*----------------------------------------------------*/
-/* Progress BAR
-/*------------------------------------------------------ */
-$(window).load(function() {
-    $(window).scroll(function() {
-        var wintop = $(window).scrollTop(),
-            docheight = $('body').height(),
-            winheight = $(window).height();
-        var totalScroll = (wintop / (docheight - winheight)) * 100;
-        $(".KW_progressBar").css("width", totalScroll + "%");
-    });
 
-});
-// /*----------------------------------------------------*/
-// /* Start Fullpage JS
-// /*------------------------------------------------------ */
-// $(document).ready(function() {
-//     $('#fullpage').fullpage();
-// });
 // /*----------------------------------------------------*/
 // /* Counter JS
 // /*------------------------------------------------------ */
-$('.count').each(function() {
-    $(this).prop('Counter', 0).animate({
-        Counter: $(this).text()
-    }, {
-        duration: 1000,
-        easing: 'linear',
-        step: function(now) {
-            $(this).text(Math.ceil(now));
-        }
+$('#hitme').on('click',function(){
+
+    $('.count').each(function() {
+        $(this).text(0);
+    });
+
+    $('.count').each(function() {
+          var $this = $(this),
+              countTo = $this.attr('data-count');
+
+            $({ countNum: $this.text()}).animate({
+            countNum: countTo
+          },
+
+          {
+
+            duration: 7000,
+            easing:'linear',
+
+            step: function() {
+              $this.text(Math.floor(this.countNum));
+            },
+            complete: function() {
+              $this.text(this.countNum);
+            }
+         });
     });
 });
+
 
 // /*----------------------------------------------------*/
 // /* ToolTip bootstrap JS & Carousel
 // /*------------------------------------------------------ */
 $(function() {
-    $('[data-supp="tooltip"]').tooltip({'delay': { show: 5000, hide: 3000 }
+    $('[data-supp="tooltip"]').tooltip({
+        'delay': {
+            show: 5000,
+            hide: 3000
+        }
     });
 });
 // Carousel
@@ -56,18 +60,56 @@ $('.carousel').carousel()
 // /* Smooth Scroll
 // /*------------------------------------------------------ */
 jQuery(document).ready(function($) {
+    $('.smoothscroll').on('click', function(e) {
+        e.preventDefault();
 
-   $('.smoothscroll').on('click',function (e) {
-	    e.preventDefault();
+        var target = this.hash,
+            $target = $(target);
 
-	    var target = this.hash,
-	    $target = $(target);
-
-	    $('html, body').stop().animate({
-	        'scrollTop': $target.offset().top
-	    }, 800, 'swing', function () {
-	        window.location.hash = target;
-	    });
-	});
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 800, 'swing', function() {
+            window.location.hash = target;
+        });
+    });
 
 });
+// /*----------------------------------------------------*/
+// /* Smooth Scroll
+// /*------------------------------------------------------ */
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
