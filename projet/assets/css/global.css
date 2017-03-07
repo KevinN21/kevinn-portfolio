@@ -4183,59 +4183,47 @@ body:after {
   max-height: 100vh;
   width: 100%; }
 
-nav {
+header nav {
   background-color: #424242;
   border: none;
   color: white;
   border-radius: 0; }
-
-.navbar {
+header .navbar {
   border-radius: 0; }
-
-.navbar .navbar-nav {
+header .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
   background-color: #424242;
   border-radius: 0; }
-
-.navbar .navbar-collapse {
+header .navbar .navbar-collapse {
   text-align: center;
   background-color: #424242; }
-
-.navbar-header {
+header .navbar-header {
   background-color: #424242; }
-
-.navbar-default .navbar-toggle {
+header .navbar-default .navbar-toggle {
   border-color: #424242; }
-
-.navbar > .container .navbar-brand,
-.navbar > .container-fluid .navbar-brand {
+header .navbar > .container .navbar-brand,
+header .navbar > .container-fluid .navbar-brand {
   margin: 0; }
-
-.navbar-brand i {
-  color: whitesmoke; }
-
-#k-navbar {
+header .navbar-brand > img {
+  height: 3vh; }
+header #k-navbar {
   border-radius: 0; }
-
-#k-navbar ul li a {
+header #k-navbar ul li a {
   font-family: "Corbel";
   font-variant: small-caps;
   font-weight: bolder;
   font-size: 1.5em;
   color: white; }
-
-#k-navbar ul li:active,
-#k-navbar ul li:hover,
-.navbar-brand:hover {
+header #k-navbar ul li:active,
+header #k-navbar ul li:hover,
+header .navbar-brand:hover {
   background-color: #ED5758; }
-
-.k-site-title img {
+header .k-site-title img {
   margin-top: 10%;
   width: 70%; }
-
-.scroll-down {
+header .scroll-down {
   position: absolute;
   left: 50%;
   top: 75vh;
@@ -4256,7 +4244,6 @@ nav {
   -webkit-animation: fade_move_down 2s ease-in-out infinite;
   -moz-animation: fade_move_down 2s ease-in-out infinite;
   animation: fade_move_down 2s ease-in-out infinite; }
-
 @-webkit-keyframes fade_move_down {
   0% {
     -webkit-transform: translate(0, -10px) rotate(45deg);
@@ -4284,7 +4271,7 @@ nav {
   100% {
     transform: translate(0, 10px) rotate(45deg);
     opacity: 0; } }
-.k-navbar {
+header .k-navbar {
   position: fixed;
   top: 0;
   z-index: 999;
@@ -4299,8 +4286,7 @@ nav {
   -webkit-box-shadow: 0 6px 3px -1px rgba(0, 0, 0, 0.45);
   -moz-box-shadow: 0 6px 3px -1px rgba(0, 0, 0, 0.45);
   box-shadow: 0 6px 3px -1px rgba(0, 0, 0, 0.45); }
-
-.sticky {
+header .sticky {
   background-color: #e3e3e3;
   opacity: 1;
   top: 0; }
@@ -4572,8 +4558,9 @@ nav {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); }
 
 #k-skills {
-  background: #ccc;
-  padding-bottom: 3%; }
+  height: 100vh;
+  padding: 4% 0;
+  background: #ccc; }
   #k-skills .k-titlesection {
     position: absolute;
     top: 4%;
@@ -4588,76 +4575,79 @@ nav {
     -moz-box-shadow: 4px 2px 4px 0px rgba(0, 0, 0, 0.75);
     box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
     z-index: 2; }
-  #k-skills .k-whatido {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10%; }
-    #k-skills .k-whatido img {
-      cursor: pointer;
-      width: 100%; }
-    #k-skills .k-whatido img:active {
-      padding: 0;
-      transform: translateY(20px);
-      -webkit-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
-      box-shadow: 10px 10px 5px 0 rgba(0, 0, 0, 0.75);
-      border-radius: 100%; }
-    #k-skills .k-whatido .k-ribbon {
-      font-family: "Corbel";
-      font-variant: small-caps;
-      font-size: 1.5em;
-      font-weight: bolder;
-      color: #000;
-      margin: 5% 0;
-      cursor: pointer; }
-  #k-skills .modal-content {
-    border-radius: 0; }
-    #k-skills .modal-content .modal-header {
-      font-family: "Corbel";
-      color: #000;
-      font-variant: small-caps;
-      border: none; }
-    #k-skills .modal-content .modal-body {
-      font-family: "Corbel"; }
-    #k-skills .modal-content .modal-footer {
-      border: none; }
-      #k-skills .modal-content .modal-footer .btn-default {
+  #k-skills .k-skill {
+    margin-top: 6%; }
+    #k-skills .k-skill .k-mainskill {
+      background-color: rgba(255, 255, 255, 0.4);
+      border: 4px solid white;
+      border-radius: 4px; }
+      #k-skills .k-skill .k-mainskill img {
+        height: auto;
+        width: 48%; }
+      #k-skills .k-skill .k-mainskill h4 {
         font-family: "Corbel";
-        color: #fff;
+        color: white;
         font-variant: small-caps;
-        background-color: #ED5758;
-        border-color: #fff; }
-      #k-skills .modal-content .modal-footer .btn {
-        display: inline-block;
-        padding: 6px 12px;
-        margin-bottom: 0;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 1.42857143;
-        text-align: center;
-        white-space: nowrap;
-        vertical-align: middle;
-        -ms-touch-action: manipulation;
-        touch-action: manipulation;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        background-image: none;
-        border: 1px solid transparent;
-        border-radius: 0; }
-      #k-skills .modal-content .modal-footer .btn.active.focus,
-      #k-skills .modal-content .modal-footer .btn.active:focus,
-      #k-skills .modal-content .modal-footer .btn.focus,
-      #k-skills .modal-content .modal-footer .btn:active.focus,
-      #k-skills .modal-content .modal-footer .btn:active:focus,
-      #k-skills .modal-content .modal-footer .btn:focus {
-        outline: 0; }
+        font-size: 4em; }
+    #k-skills .k-skill .k-skillinfo {
+      border: 4px solid white;
+      border-radius: 3px;
+      background-color: rgba(255, 255, 255, 0.4);
+      font-family: "Corbel";
+      color: white; }
+      #k-skills .k-skill .k-skillinfo h3 {
+        font-variant: small-caps; }
+        #k-skills .k-skill .k-skillinfo h3 span {
+          font-variant: none; }
+        #k-skills .k-skill .k-skillinfo h3 ul {
+          margin-left: 30%;
+          list-style: none;
+          font-variant: none; }
+    #k-skills .k-skill .k-skilltree {
+      text-transform: capitalize;
+      font-weight: 400;
+      text-align: center;
+      color: white;
+      font-family: "Corbel";
+      font-size: 1.4rem;
+      height: 78vh; }
+      #k-skills .k-skill .k-skilltree .k-skillweb {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(23, 178, 38, 0.4);
+        border: 4px solid #17b226;
+        border-radius: 4px; }
+        #k-skills .k-skill .k-skilltree .k-skillweb h3 {
+          color: green; }
+        #k-skills .k-skill .k-skilltree .k-skillweb img {
+          border: 4px solid #17b226;
+          border-radius: 4px; }
+      #k-skills .k-skill .k-skilltree .k-skilltool {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(17, 118, 219, 0.4);
+        border: 4px solid #1176db;
+        border-radius: 4px; }
+        #k-skills .k-skill .k-skilltree .k-skilltool img {
+          border: 4px solid #1176db;
+          border-radius: 4px; }
+      #k-skills .k-skill .k-skilltree .k-skillhobby {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: rgba(229, 48, 48, 0.4);
+        border: 4px solid #e53030;
+        border-radius: 4px; }
+        #k-skills .k-skill .k-skilltree .k-skillhobby img {
+          border: 4px solid #e53030;
+          border-radius: 4px; }
 
 #k-contact {
-  background-image: url("../img/backgroundphone.jpeg");
-  background-size: cover; }
+  background-image: url("../img/giphy.gif");
+  background-size: cover;
+  height: 94vh; }
   #k-contact .k-titlesection {
     position: absolute;
     top: 4%;
@@ -4706,83 +4696,6 @@ footer {
     margin-right: 3%;
     color: #fffeff; }
 
-@media (orientation: landscape) {
-  #k-abtme {
-    margin-top: 1%;
-    background-color: #e3e3e3;
-    position: relative; }
-    #k-abtme .k-titlesection {
-      position: absolute;
-      top: 4%;
-      left: -1%;
-      padding: 0.5% 3%;
-      font-family: "Corbel";
-      font-variant: small-caps;
-      font-weight: bolder;
-      color: #fff;
-      background-color: #ED5758;
-      -webkit-box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 4px 2px 4px 0px rgba(0, 0, 0, 0.75);
-      box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.75);
-      z-index: 2; }
-    #k-abtme .content {
-      margin-top: 4%; }
-      #k-abtme .content .k-name {
-        margin-top: 10%; }
-      #k-abtme .content article figure img {
-        margin-top: 17%;
-        width: 100%;
-        max-width: none;
-        max-height: none;
-        height: auto; }
-      #k-abtme .content article h2 {
-        text-transform: uppercase;
-        font-family: 'Montserrat', sans-serif;
-        padding: 0;
-        color: #4D4D4D;
-        font-size: 4em; }
-      #k-abtme .content article h3 {
-        text-transform: uppercase;
-        font-family: 'Montserrat', sans-serif;
-        padding: 0;
-        color: #4D4D4D;
-        font-size: 3em; }
-      #k-abtme .content .k-counter {
-        position: absolute;
-        top: 10em;
-        font-size: 1.5em; }
-        #k-abtme .content .k-counter .countDiv {
-          background: #ED5758;
-          border-radius: 50%;
-          height: 20vh;
-          width: 10vw;
-          margin: 0 0.5%; }
-          #k-abtme .content .k-counter .countDiv img {
-            width: 100%;
-            height: 5vh; }
-          #k-abtme .content .k-counter .countDiv p {
-            font-size: 0.8em;
-            font-style: "Corbel";
-            font-variant: small-caps;
-            font-weight: lighter;
-            color: white; }
-        #k-abtme .content .k-counter button {
-          margin-top: 3%;
-          padding: 1%; }
-
-  #k-works .k-mywork {
-    margin-top: 10%; }
-    #k-works .k-mywork figure {
-      float: left; }
-      #k-works .k-mywork figure figcaption {
-        width: 19%;
-        height: 20vh;
-        margin: 3%; }
-        #k-works .k-mywork figure figcaption img {
-          width: 100%;
-          height: 100%; }
-        #k-works .k-mywork figure figcaption p {
-          font-size: 10px; } }
 @media (min-width: 767px) and (max-width: 992px) {
   body {
     overflow: auto; }
@@ -4954,7 +4867,7 @@ footer {
         cursor: pointer; }
 
   #k-contact {
-    background-image: url("../img/backgroundphone.jpeg");
+    background-image: url("../img/backgroundphone.jpg");
     background-size: cover; }
     #k-contact .k-titlesection {
       position: absolute;
@@ -5174,7 +5087,7 @@ footer {
         cursor: pointer; }
 
   #k-contact {
-    background-image: url("../img/backgroundphone.jpeg");
+    background-image: url("../img/backgroundphone.jpg");
     background-size: cover;
     text-align: center; }
     #k-contact .k-titlesection {
