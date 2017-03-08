@@ -44,17 +44,9 @@ $('#hitme').on('click',function(){
 
 
 // /*----------------------------------------------------*/
-// /* ToolTip bootstrap JS & Carousel
+// /* Carousel
 // /*------------------------------------------------------ */
-$(function() {
-    $('[data-supp="tooltip"]').tooltip({
-        'delay': {
-            show: 5000,
-            hide: 3000
-        }
-    });
-});
-// Carousel
+
 $('.carousel').carousel()
 // /*----------------------------------------------------*/
 // /* Smooth Scroll
