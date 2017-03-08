@@ -266,6 +266,16 @@ header{
         top: 0;
     }
 }
+main{
+    position:relative;
+
+    .scrollbutton{
+        position:fixed;
+        top:10%;
+        right:0;
+        z-index:1;
+    }
+}
 //---------- SECTION ABOUT ME ------------//
 #k-abtme {
     margin-top: 1%;
@@ -327,7 +337,7 @@ header{
                     p{
                         font-style: $navfont;
                         font-variant: small-caps;
-                        font-size: 1em;
+                        font-size: 0.5em;
                         font-weight: lighter;
                         color:white;
 
@@ -345,6 +355,8 @@ header{
                     margin-bottom:1px;
                 }
     }
+
+
 }
 //---------- SECTION MY WORK -------------//
 #k-works {
@@ -362,9 +374,9 @@ header{
             float: left;
 
             figcaption {
-                width: 19%;
+                width: 23%;
                 height:30vh;
-                margin: 3%;
+                margin: 1%;
 
                 img {
                     width: 100%;
@@ -596,117 +608,6 @@ header{
     .k-titlesection {
         @include title-ribbon();
     }
-.k-skill
-{
-    margin-top:6%;
-    .k-mainskill
-    {
-
-        background-color: rgba(255,255,255,0.4);
-        border:4px solid rgb(255,255,255);
-        border-radius: 4px;
-
-        img
-        {
-            height:auto;
-            width: 48%;
-
-        }
-        h4
-        {
-            font-family: $titlefont;
-            color:white;
-            font-variant: small-caps;
-            font-size: 4em;
-        }
-    }
-    .k-skillinfo
-    {
-
-        border:4px solid white;
-        border-radius: 3px;
-        background-color: rgba(255,255,255,0.4);
-
-        font-family: $titlefont;
-        color:white;
-        h3
-        {
-            font-variant: small-caps;
-            span
-            {
-                font-variant: none;
-            }
-            ul
-            {
-                margin-left: 30%;
-                list-style: none;
-                font-variant: none;
-            }
-        }
-    }
-    .k-skilltree
-    {
-        text-transform: capitalize;
-
-        font-weight: 400;
-        text-align: center;
-        color:white;
-        font-family: $titlefont;
-        font-size: 1.4rem;
-
-        height:78vh;
-
-        .k-skillweb
-        {
-            height:100%;
-            margin: 0;
-            padding: 0;
-            background-color: rgba(23, 178, 38,0.4);
-            border:4px solid rgb(23, 178, 38);
-            border-radius:4px;
-            h3
-            {
-                color:green;
-            }
-            img
-            {
-                border:4px solid rgb(23, 178, 38);
-                border-radius:4px;
-            }
-        }
-        .k-skilltool
-        {
-            height:100%;
-            margin: 0;
-            padding:0;
-            background-color: rgba(17, 118, 219, 0.4);
-            border:4px solid rgb(17, 118, 219);
-            border-radius:4px;
-
-            img
-            {
-                border:4px solid rgb(17, 118, 219);
-                border-radius:4px;
-            }
-        }
-        .k-skillhobby
-        {
-            height:100%;
-            margin: 0;
-            padding: 0;
-            background-color: rgba(229, 48, 48, 0.4);
-            border:4px solid rgb(229, 48, 48);
-            border-radius:4px;
-
-            img
-            {
-                border:4px solid rgb(229, 48, 48);
-                border-radius:4px;
-            }
-        }
-    }
-}
-
 }
 //---------- SECTION CONTACT --------------//
 #k-contact {
